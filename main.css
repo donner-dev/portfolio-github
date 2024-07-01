@@ -1,0 +1,245 @@
+/* root */
+
+html{
+    background-color: var(--dark-white);
+    
+    height:100%;
+}
+:root {
+
+    /* VARIABLES AND COLORS PALLETES */
+
+/* Color for developing. NOT FINAL */
+--debug: #3d2b16;
+
+/* MUYY VEREMOS. VEREMOS. PALETA PROVISORIA PIOLA, RESEARCH UR GREENS  */
+    --dark-space: #0f0f1a;
+    --dark-white: #e2ebff;
+
+
+    --dark-green: #04250d;
+    --dark-neon: #abf862  ; /* glow and neon effects mostly. i still want this to be sober. */
+    --dark-accent: #9b52b1; /* somewhere between pink and magenta should be fine */
+
+    
+    --lite-space:   #cfdac6  ;
+    
+    --lite-green:#42644a; ;
+    
+    --lite-shadow: #171f24;
+    --lite-accent: #d452d8;  /* irdk about this one REALLY TRY THEM ALL BEFORE */
+
+
+
+}
+/* end root */
+
+/* CONTAINERS */
+div, section, nav {
+
+    margin: auto; padding: 1rem; border: 1px solid var(--debug);
+
+    
+
+}
+
+
+body {
+     background-color: var(--dark-space);
+     color: var(--dark-white);
+    padding:10rem;
+     border:3px solid #9b52b1 ;
+     width:100vw;
+}
+
+.depth{
+    box-shadow: inset 10px 10px 10px 10px black;
+}
+
+
+/* BACKDROP */
+        /* white border??? */
+        /* space backdrops for background needs? */
+
+
+
+/* CURSOR   STUFF*/
+
+
+/* the cursor is custom and has a soft aura light 
+    when the cursor goes over something "interesting" (a.k.a interactable)
+    it glows in a more intense and saturated color light
+     
+    and the thing it goes over should lighten up as well
+
+    we're apparently going for glossy glass blur effect
+
+
+*/
+/* neon cursor (old)
+
+1.track mouse event onmove
+2. generate div glowy speck 
+3. make it follow the cursor
+4. delay animation?
+
+
+
+*/
+
+#cursorglow{
+    height: 30px; width: 30px; border-radius: 50%;
+    border: 1px dotted rgb(147, 219, 243);
+    background-color: #6c3c83;
+
+
+    /* soft aura light */
+    background: -moz-radial-gradient(circle, rgba(238,174,202,0.8) 0%, rgba(238,174,202,0.2) 100%);
+    box-shadow: 0px 0px 20px rgb(174, 95, 194);
+    background: radial-gradient(  /* ooo interesting! */
+                circle, 
+                rgba(134, 35, 78, 0.8) 0%, 
+                rgba(139, 23, 155, 0.2) 100%
+                );
+    position: absolute;
+}
+
+
+
+
+.cursoractive{
+            /* when this is active, glow a more vibrant color! */
+            
+
+
+
+
+}
+
+.box-active{
+            /* when this is active, reflect some border light! */
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* AAAAAAAAAAAAAAAAAAAAAAAAAA O H MY FUCKING GOD */
+
+
+
+
+
+
+
+
+
+
+/* NAVIGATION SCREEN */
+/* WILL TAKE MANY SHAPES AND LIVES. SIT YOUR ASS DOWN.  LET THIS BE.  */
+
+
+
+/* WE GOT THIS HUMAN. WE SO GOT THIS. LETS GO */
+
+
+
+nav{
+position: absolute;
+/* initally hidden or expanded by menu button */
+padding:2rem;
+top:0; right:0;
+background-color: #9b52b1; border: 1px solid #0f0f1a;
+width: 30rem; height: 30rem;
+
+clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 17% 83.5%);
+
+/* grab the div and slice it up. look up clip path */
+}
+
+
+
+
+
+
+/* CONTACT SECTION */
+
+
+/* WILL ALSO TAKE MANY LIVES. GET USED TO IT.  */
+
+
+
+
+
+
+
+/* PROJECT SECTION */
+
+
+
+
+
+
+
+/* WILL ALSO TAKE MANY LIVES. GET USED TO IT.  */
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER? SECTION */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* END TESTAMENT =============================================== */
+/* 
+            Here Lie the final ashes of what will now begin to be.
+            The end of the beginning, the cracking of the shell.
+            The cry that follows the breathe of new things.
+
+
+
+
+
+
+
+ */
