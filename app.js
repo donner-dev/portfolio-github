@@ -9,6 +9,13 @@ if (theme){
 }
 
 
+document.addEventListener("mousemove", (event) => {
+  
+  let cursor = document.querySelector('#cursorglow');
+  cursor.style.left = event.clientX + 'px';
+  cursor.style.top = event.clientY + 'px';
+});
+
 
 /* =========== =    THEME TOGGLE HANDLER     =  ============== */
 
@@ -52,13 +59,6 @@ themeBtn.onclick = () => {
 
 */
 
-
-document.addEventListener("mousemove", (event) => {
-  
-    let cursor = document.querySelector('#cursorglow');
-    cursor.style.left = event.clientX + 'px';
-    cursor.style.top = event.clientY + 'px';
-});
 
 
 

@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Game Of Squids';
+    font-family: GameOfSquids;
     src: url('GameOfSquids.woff2') format('woff2'),
         url('GameOfSquids.woff') format('woff'),
         url('GameOfSquids.ttf') format('truetype');
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-    font-family: 'BatmanForeverOutline';
+    font-family:BatmanOutline;
     src: url('BatmanForeverOutline.woff2') format('woff2'),
         url('BatmanForeverOutline.woff') format('woff'),
         url('BatmanForeverOutline.ttf') format('truetype');
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-    font-family: 'BatmanForeverAlternate';
+    font-family:Batman;
     src: url('BatmanForeverAlternate.woff2') format('woff2'),
         url('BatmanForeverAlternate.woff') format('woff'),
         url('BatmanForeverAlternate.ttf') format('truetype');
@@ -29,7 +29,7 @@
 }
 
 @font-face {
-    font-family: 'Hungaria';
+    font-family:Hungaria;
     src: url('Hungaria-Regular.woff2') format('woff2'),
         url('Hungaria-Regular.woff') format('woff'),
         url('Hungaria-Regular.ttf') format('truetype');
@@ -39,7 +39,7 @@
 }
 
 @font-face {
-    font-family: 'Origin Tech Demo';
+    font-family:Origin;
     src: url('OriginTechDemoRegular.woff2') format('woff2'),
         url('OriginTechDemoRegular.woff') format('woff'),
         url('OriginTechDemoRegular.ttf') format('truetype');
@@ -49,7 +49,7 @@
 }
 
 @font-face {
-    font-family: 'Hungaria';
+    font-family:Hungaria;
     src: url('Hungaria-Italic.woff2') format('woff2'),
         url('Hungaria-Italic.woff') format('woff'),
         url('Hungaria-Italic.ttf') format('truetype');
@@ -59,7 +59,7 @@
 }
 
 @font-face {
-    font-family: 'Square Game';
+    font-family:SquareGame;
     src: url('SquareGame-Regular.woff2') format('woff2'),
         url('SquareGame-Regular.woff') format('woff'),
         url('SquareGame-Regular.ttf') format('truetype');
@@ -69,7 +69,7 @@
 }
 
 @font-face {
-    font-family: 'Blue Screen Personal Use';
+    font-family: BlueScreen;
     src: url('BlueScreenPersonalUse-Regular.woff2') format('woff2'),
         url('BlueScreenPersonalUse-Regular.woff') format('woff'),
         url('BlueScreenPersonalUse-Regular.ttf') format('truetype');
@@ -79,7 +79,7 @@
 }
 
 @font-face {
-    font-family: 'Origin Tech Demo';
+    font-family: Origin;
     src: url('OriginTechDemoRegular_1.woff2') format('woff2'),
         url('OriginTechDemoRegular_1.woff') format('woff'),
         url('OriginTechDemoRegular_1.ttf') format('truetype');
@@ -89,7 +89,7 @@
 }
 
 @font-face {
-    font-family: 'Linear Beam';
+    font-family:LinearBeam;
     src: url('LinearBeam05.woff2') format('woff2'),
         url('LinearBeam05.woff') format('woff'),
         url('LinearBeam05.ttf') format('truetype');
