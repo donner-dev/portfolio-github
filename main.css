@@ -47,16 +47,37 @@ div, section, nav {
 body {
      background-color: var(--dark-space);
      color: var(--dark-white);
-    padding:10rem;
-     border:3px solid #9b52b1 ;
+    padding:1rem;
+     border:3px solid #85b152 ;
      width:100vw;
+
+     background-image: linear-gradient(#2e2880 1.5px, transparent 1.5px), linear-gradient(to right, #2e2880 1.5px, transparent 1.5px);
+background-size: 48px 48px;
+background-color: #1a1a1f;
 }
 
 .depth{
     box-shadow: inset 10px 10px 10px 10px black;
 }
 
+.container{ /* glass template */
+    min-width: 4rem; min-height: 4rem; 
+    padding:3rem; border-radius: 20px;
+    background: rgba(15,32,40,0.35);
+-webkit-backdrop-filter: blur(6px);
+backdrop-filter: blur(6px);
+-webkit-box-shadow: -6.5px 9.5px 12.5px 1.5px #737384;
+-moz-box-shadow: -6.5px 9.5px 12.5px 1.5px #737384;
+box-shadow: -6.5px 9.5px 12.5px 1.5px #737384;
 
+}
+
+.flex{
+    display:flex;
+    flex-flow: column wrap-reverse;
+    justify-content: center; align-items: center;
+    gap: 30px;
+}
 /* BACKDROP */
         /* white border??? */
         /* space backdrops for background needs? */
@@ -88,18 +109,17 @@ body {
 */
 
 #cursorglow{
-    height: 30px; width: 30px; border-radius: 50%;
-    border: 1px dotted rgb(147, 219, 243);
-    background-color: #6c3c83;
+    height: 50px; width: 50px; border-radius: 50%;
+    
+    
 
 
     /* soft aura light */
-    background: -moz-radial-gradient(circle, rgba(238,174,202,0.8) 0%, rgba(238,174,202,0.2) 100%);
-    box-shadow: 0px 0px 20px rgb(174, 95, 194);
+
     background: radial-gradient(  /* ooo interesting! */
                 circle, 
-                rgba(134, 35, 78, 0.8) 0%, 
-                rgba(139, 23, 155, 0.2) 100%
+                rgba(225, 68, 240, 0.8) 0%, 
+                rgba(78, 27, 85, 0.2) 100%
                 );
     position: absolute;
 }
@@ -126,7 +146,14 @@ body {
 
 
 
+h1{
 
+}
+
+.title{
+
+
+}
 
 
 
@@ -167,7 +194,10 @@ padding:2rem;
 top:0; right:0;
 background-color: #9b52b1; border: 1px solid #0f0f1a;
 width: 30rem; height: 30rem;
-
+background: rgba(27,18,83,0.6);
+-webkit-backdrop-filter: blur(11px);
+backdrop-filter: blur(11px);
+border: 1px solid rgba(27,18,83,0.3);
 clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 17% 83.5%);
 
 /* grab the div and slice it up. look up clip path */
