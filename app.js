@@ -9,35 +9,30 @@ if (theme){
 }
 
 
-document.addEventListener("mousemove", (event) => {
-  
-  let cursor = document.querySelector('#cursorglow');
-  cursor.style.left = event.clientX + 'px';
-  cursor.style.top = event.clientY + 'px';
-});
 
 
 /* =========== =    THEME TOGGLE HANDLER     =  ============== */
 
-themeBtn.onclick = () => {
-    /* look up how to handle states on a toggle and animate them btw */
-        /* Is a TOGGLE. So 1 is on, 0 is off.  0 by default is dark */
-
-/* TEST THESE */
-/* 
-    isDark && body.classList.replace('dark','light');
-
-    !isDark && body.classList.replace('light', 'dark');
- */
 
 
-     /* saving to local storage config */
-    localStorage.setItem('theme','dark');
-    localStorage.setItem('theme','light');
-}
 
 
-/* =========== =   MOUSE GLOW STUFF     =  ============== */
+
+
+/* =========== =     MOUSE GLOW STUFF     =  ============== */
+
+let cursor = document.querySelector('#cursorglow');
+document.addEventListener("mousemove", (event) => {
+
+  cursor.style.left = event.clientX + 'px';
+  cursor.style.top = event.clientY + 'px';
+
+  /* delay here */
+});
+
+document.addEventListener("onmouseover",(event)=>{
+  cursor.classList.add("glowing");
+});
 
         /* IDEA!! I could use these event listeners to:
         when a BOX is ACTIVE, fetch the coordinates of where the cursor is 
@@ -61,11 +56,31 @@ themeBtn.onclick = () => {
 
 
 
+/* NAV BTN */
+let nav = document.getElementById("nav");
+let navbtn = document.querySelector(".nav-btn");
 
 
+window.addEventListener("DOMContentLoaded", function() {
+  function displayNav(){
+    console.log("displayNav");
+  
+   
+  
+    if(nav.style.display==="none"){ 
+      /* isclosed. display */
+      nav.style.animation="fadeInMenu 2s";
+      nav.style.display="block";
+  
+    } else {  /* isopen. close */
+      nav.style.display="none";
+    }
+  
+  }
+  navbtn.onclick() = function(){displayNav()};
 
 
-
+}); 
 
 
 
@@ -75,13 +90,9 @@ themeBtn.onclick = () => {
 
 /* 
 toggles
-
 button onclick handle isactive background color change?
-
                             - (later) WHAT THE FDCK DID I MEAN BY THIS
 */
-
-
 
 /* LOAD CONTENT SECTION:  MAY CHANGE */
 
