@@ -73,10 +73,21 @@ class TextScramble {
   'Software Design',
   'UI/UX Designer',
   'Front End Wizard',
-  'Always Improving',
+  'Logic, Creativity and Magic',
   'Always Learning',
-  'More To Come!'
+  'Refilling coffee cup'
 ];
+
+const frases = [
+  'Creando cosas maravillosas',
+  'Diseño de Software',
+  'Diseñadora UI/UX',
+  'Hechicero del Front End',
+  'Logica, Creatividad y Magia!',
+  'Siempre aprendiendo',
+  'Cebando otro Mate'
+];
+
   
   const el = document.querySelector('.subtitle-text');
   const fx = new TextScramble(el);

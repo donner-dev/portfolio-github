@@ -1,6 +1,9 @@
 /* DOM ELEMENTS */
 const themeBtn = document.getElementById('themeBtn');
 const body = document.body;
+/* NAV BTN */
+let nav = document.querySelector("#nav");
+let navbtn = document.querySelector(".nav-btn");
 
 /* apply cached theme on reload */
 const theme = localStorage.getItem('theme');
@@ -11,24 +14,15 @@ if (theme){
 
 
 
+
+
+
+
 /* =========== =    THEME TOGGLE HANDLER     =  ============== */
 
 
 
-
-
-
-
 /* =========== =     MOUSE GLOW STUFF     =  ============== */
-
-let cursor = document.querySelector('#cursorglow');
-document.addEventListener("mousemove", (event) => {
-
-  cursor.style.left = event.clientX + 'px';
-  cursor.style.top = event.clientY + 'px';
-
-  /* delay here */
-});
 
 document.addEventListener("onmouseover",(event)=>{
   cursor.classList.add("glowing");
@@ -43,6 +37,7 @@ document.addEventListener("onmouseover",(event)=>{
 
         -well, yeah, but wouldnt it be COOL!?
 
+                  (later) https://codepen.io/jh3y/pen/QWYPaax turns out it exists and it found you, blessed by the universe
         */
 
 
@@ -54,30 +49,105 @@ document.addEventListener("onmouseover",(event)=>{
 
 */
 
+console.clear();
+const circleElement = document.querySelector('.circle');
+
+// objects to track mouse position and custom cursor position
+const mouse = { x: 0, y: 0 };
+const previousMouse = { x: 0, y: 0 } 
+const circle = { x: 0, y: 0 }; 
+let currentScale = 0;
+let currentAngle = 0; 
+
+// Update mouse position on the 'mousemove' event
+window.addEventListener('mousemove', (e) => {
+  mouse.x = e.x;
+  mouse.y = e.y;
+});
+
+// Smoothing factor for cursor movement speed (0 = smoother, 1 = instant)
+const speed = 0.17;
+
+// Start animation
+const tick = () => {
+  // MOVE
+  // Calculate circle movement based on mouse position and smoothing
+  circle.x += (mouse.x - circle.x) * speed;
+  circle.y += (mouse.y - circle.y) * speed;
+  // Create a transformation string for cursor translation
+  const translateTransform = `translate(${circle.x}px, ${circle.y}px)`;
+
+  // SQUEEZE
+  // 1. Calculate the change in mouse position (deltaMouse)
+  const deltaMouseX = mouse.x - previousMouse.x;
+  const deltaMouseY = mouse.y - previousMouse.y;
+  // Update previous mouse position for the next frame
+  previousMouse.x = mouse.x;
+  previousMouse.y = mouse.y;
+  // 2. Calculate mouse velocity using Pythagorean theorem and adjust speed
+  const mouseVelocity = Math.min(Math.sqrt(deltaMouseX**2 + deltaMouseY**2) * 4, 150); 
+  // 3. Convert mouse velocity to a value in the range [0, 0.5]
+  const scaleValue = (mouseVelocity / 150) * 0.5;
+  // 4. Smoothly update the current scale
+  currentScale += (scaleValue - currentScale) * speed;
+  // 5. Create a transformation string for scaling
+  const scaleTransform = `scale(${1 + currentScale}, ${1 - currentScale})`;
+
+  // ROTATE
+  // 1. Calculate the angle using the atan2 function
+  const angle = Math.atan2(deltaMouseY, deltaMouseX) * 180 / Math.PI;
+  // 2. Check for a threshold to reduce shakiness at low mouse velocity
+  if (mouseVelocity > 20) {
+    currentAngle = angle;
+  }
+  // 3. Create a transformation string for rotation
+  const rotateTransform = `rotate(${currentAngle}deg)`;
+
+  // Apply all transformations to the circle element in a specific order: translate -> rotate -> scale
+  circleElement.style.transform = `${translateTransform} ${rotateTransform} ${scaleTransform}`;
+
+  // Request the next frame to continue the animation
+  window.requestAnimationFrame(tick);
+}
+
+// Start the animation loop
+tick();
 
 
-/* NAV BTN */
-let nav = document.getElementById("nav");
-let navbtn = document.querySelector(".nav-btn");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 window.addEventListener("DOMContentLoaded", function() {
-  function displayNav(){
-    console.log("displayNav");
   
-   
-  
-    if(nav.style.display==="none"){ 
-      /* isclosed. display */
-      nav.style.animation="fadeInMenu 2s";
-      nav.style.display="block";
-  
-    } else {  /* isopen. close */
-      nav.style.display="none";
-    }
-  
-  }
-  navbtn.onclick() = function(){displayNav()};
+  navbtn.onclick = function(){displayNav()};
 
 
 }); 

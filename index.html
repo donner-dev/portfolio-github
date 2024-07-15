@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- 
+    The default theme as of this version is DARK
+     [Will be changed to adapt to system preference and manual selection]
+     
+-->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,112 +13,281 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="src/fonts/fonts.css">
+    <script src="https://kit.fontawesome.com/b18770bfe9.js" crossorigin="anonymous"></script>
     <script defer src="app.js"></script>
     <script defer src="typing.js"></script>
+    
 
 </head>
 
 
-<!-- 
-    The default theme as of this version is DARK
-     [Will be changed to adapt to system preference and manual selection]
-     
--->
+
+
 
 <body class="depth  ">
-        <!-- deja de romperte retovado -->
-    <canvas id="cursorglow"></canvas> 
+    <canvas id="cursorglow" class="circle" >
+    </canvas> <!-- do you work here? where you are now? -->
+<!-- check why cursor limits to upper area -->
 
+    
+ <!-- Im desperately asking for help with this fucking shit ass nav -->
+        <!-- maybe have it be on the side center and when it opens it opens a menu that covers the whole right side ofth e page -->
 
-    <div class="nav-btn" onclick="displayNav()">X</div>
-    <nav id="#nav">
-        <ul>
-            <li class="item"><a href="" class="link">Projects</a></li>
-            <li class="item"><a href="" class="link"></a>About Me</li>
-            <li class="item"><a href="" class="link"></a>Contact</li>
+    <div class="altnav">
+        
+    </div>
+    <nav class="flex" id="nav">  
+         <input type="checkbox" id="menu">
+         <label for="menu">Menu</label>
+        <ul class="menu">
+            <li>
+                <a href="#0">
+                  
+
+                     
+                  <i class="fa-solid fa-person"></i>
+                  <i class="fa-solid fa-universal-access"></i>
+                  <i class="fa-regular fa-address-card"></i>                        
+                  <i class="fa-regular fa-comment-dots"></i> <span>About Me</span>
+                
+                </a>
+            </li>
+            <li>
+                <a href="#0">
+                  
+                  <i class="fas fa-tasks" aria-hidden="true"></i>
+                  <i class="fa-solid fa-briefcase"></i> <span>Projects</span>
+                </a>
+            </li>
+            <li>
+                <a href="#0">
+                  
+                  <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
+                  <i class="fa-regular fa-paper-plane"></i><span>Contact</span>
+                </a>
+            </li>
         </ul>
     </nav>
 
-    <header class="hidden" >
-          <h1 style=" font-family: GameOfSquids;" >DONNER DEV</h1>
-<!--       <h1 style=" font-family: Origin; letter-spacing: 1px;" >DONNER DEV</h1>
-            <h1 style=" font-family:LinearBeam" >DONNER DEV</h1>
-        
- -->
-            
-
-        
+    <header class="hidden" >  
+          <h1 style=" font-family: GameOfSquids;" > DONNER DEV  </h1>
         <div class="subtitle-display">
             <div class="subtitle-text"></div>
           </div>
     
         <!-- Space for some sort of portfolio arts canvas or 3d render of some sorts
          kinda show off area -->
-
-            
-
-
+         <!-- https://codepen.io/hugo/pen/poyqwe something like this? -->
     </header>
     
 
 
-    <main class="glass flex ">
+    <main class="">
 
-       <section class=" glass projects">
-            <h1>Project Section DEBUG</h1>
-            <div class="main-project">
-                    <h1>BIG BIG SECTION OF CLB </h1>
-                    <h5>Short Description</h5>
-                    <div class="tools-container"></div>
+
+<!-- PROJECTS SECTION -->
+
+
+       <section class="projectsection flex"> <!-- has to be big -->
+            <h1>Projects</h1>
+            
+            <article class="wide-container project " >
+                <div class="glows"> </div>
+
+                <h2>C'est La Brie - Ecommerce web</h2>  
+                    <!-- main showcase of CLB -->
+                    <img src="project-img1.png" alt="project-img1">
+                    <p>
+                        Text descriptions
+                    </p>
+            </article>
+            
+            <div class="wide-container splitscreen" >  
+                <!-- https://codepen.io/tutsplus/pen/bWKMoK -->
+                 <!-- Proof of progress:
+                  2021/2024  CLB CASE STUDY
+                   -->
+                 <!-- for comparing clb old and new design -->
+                  <p>
+                    C'est La Brie is my passion project. 
+                    I started developing and designing this brand for a course a couple of years ago, and i brought to myself the challenge of COMPLETELY redesigning it 
+                    making use of the tools and experience i acquired through the years.
+                    From Figma wireframing to Final Production, 
+                    this artisanal cheese e-commerce platform was carefully designed around user experience and best practices in mind, always prioritizing branding and of course user experience.
+                    
+                   (!) This project also allowed me the opportunity to expand my skills to backend, 
+                   effectively teaching myself how to design and handle a business database with the clients, products and sales statistics.
+                   You can browse the fine dairy products and add them to your cart.
+                   Managing a project of this scale by my own taught me a lot of management and problem-solving skills, so even if ardous, it armed me with plenty of experience on all things web.
+                </p>
+            </div>
+            
+
+            <!-- Other projects -->
+            <div class="card-container flex ">
+
+
+
+
+                                                        <!-- BYTEBOUTIQUE -->
+                <article class="project"> 
+                    <div class="glows"> </div>
+
+                    <h6> ByteBoutique  E-Commerce        </h6>
+
+                    <img src="project-img1.png" alt="project-img1">
+
+                    <p>
+
+                        Text de
+                        scriptions
+
+                    </p>
+                    
+                    <span class="badge">    <!-- tool badge -->
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <span>TOOLS : </span>
+                    </span>
+
+
+                </article>
+
+
+
+                <article class="">               <!-- DOMUS -->
+                    <div class="glows"> </div>
+
+                    <h6 > DOMUS Inmobiliaria    </h6>
+
+                    <img src="project-img1.png" alt="project-img1">
+
+                    <p >
+
+                        Text descriptions
+
+                    </p>
+
+                        
+
+                    <span class="badge">    <!-- tool badge -->
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <span>TOOLS : </span>
+                    </span>
+
+                </article>
+
+
+
+                
+                <article class="project">           <!-- CATERPILLAR or maybe the weather api -->
+                    <div class="glows">
+          
+                    </div>
+
+
+                    <h6 > CATERPILLAR     </h6>
+
+                    <img src="project-img1.png" alt="project-img1">
+
+                    <p>
+                        Text descriptions
+                    </p>
+
+                    <span class="badge">    <!-- tool badge -->
+                        <i class="fa-solid fa-screwdriver-wrench fa-bounce" style="color: #B197FC;">tools used in project</i>
+                        <span>TOOLS : </span>
+                    </span>
+
+                </article>
+
+
+
                 
             </div>
-            <div class="simple-project">
-                <h3>Title of Project</h3>
-                <p>Small project where i did X and Y and Z</p>
-                <img src="assets/project.png" alt="projectpicture">
-            </div>
-
 
 
         </section>
 
-        <section class="aboutme 
-        ">
-            <h1>Project Section DEBUG</h1>
-            <div class="clb project
-            ">
-                    <h1>BIG BIG SECTION OF CLB </h1>
-                    <h5>Short Description</h5>
-                    <!-- Tools used?? -->
-                
-            </div>
+<!-- I trust that i will come back to this once i finish what i need to finish. -->
+ <!-- before and after of the clb redesign -->
+  <!-- "I grabbed these and redesigned them for small businesses" -->
+   <!-- also add sprinkle to it maybe!? -->
+
+            
+
+
+       
+      
+          
+       <section class="glass aboutsection flex"> <!-- chathpt text. REVISE. -->
+        <h1>About Me</h1>
+            <p>
+                Ever since I was a kid, I loved the internet. I enjoyed browsing websites and exploring their functionalities. 
+                Through the years, I studied and developed a deep understanding of how they work and what makes them successful. 
+                I'm passionate about user design and pushing the boundaries of what's possible on the web.
+
+My name is Isabel Leonor Donner. A college student major in System Engineering specializing in web design and development. 
+My journey is enriched with a range of experiences, 
+including leading impactful projects during my time at [Your College/University]. 
+These projects involved [mention specific skills or technologies], 
+showcasing my ability to create user-centric solutions.
+
+In addition to my formal education, 
+I am continually exploring new ideas for projects that aim to enhance user experiences and solve real-world problems. I believe that thoughtful design can profoundly benefit people by [mention how your projects would benefit users].
+
+I am eager to apply my skills and creativity to contribute to innovative projects in [Your Profession or Field], leveraging my expertise in [mention relevant skills or technologies].
+
+Explore my portfolio to see examples of my work and projects!
+ <!-- Projects or Contact button CTA ? -->
+            
+
+            </p>
+       </section>
 
 
 
-        </section>
 
-        <section class="contact
-        ">
-            <h1>Project Section DEBUG</h1>
-            <div class="clb project
-            ">
-                    <h1>BIG BIG SECTION OF CLB </h1>
-                    <h5>Short Description</h5>
-                    <!-- Tools used?? -->
-                
-            </div>
+
+        <section class="contact">
+            <h1>Contact Me!</h1>
+            <p>There shall be a form here soon if my daddy gets enough work done</p>
+
+
+
+
 
 
 
         </section>
 
         
-        <footer class="footer">
-
-
+        <footer>
+                 <p>Made with love and discipline by me @ 2024   <i class="fa-solid fa-hand-peace"></i> <!-- do i get a peronista bonus -->
+                </p>
+        
+        
+        
+        
+        
+        
         </footer>
+
+
+
+
+
+
     </main>
 
+        <!-- scripts -->
+         <script>
+                window.addEventListener('mousemove', (e) => {
+                mouse.x = e.x;
+                mouse.y = e.y;
+                });
+         </script>
 
+    
+   
 </body>
 </html>
