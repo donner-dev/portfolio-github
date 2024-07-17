@@ -23,42 +23,51 @@
 
 
 
-
 <body class="depth  ">
     <canvas id="cursorglow" class="circle" >
     </canvas> <!-- do you work here? where you are now? -->
 <!-- check why cursor limits to upper area -->
 
-    
+
+<!-- AUX ELEMENT -->
+
+
  <!-- Im desperately asking for help with this fucking shit ass nav -->
         <!-- maybe have it be on the side center and when it opens it opens a menu that covers the whole right side ofth e page -->
 
     <div class="altnav">
-        
+        <!-- this is the vertical dots thingy for desktop minimalist navigation-->
+       
     </div>
-    <nav class="flex" id="nav">  
+
+
+    <nav class="cd-vertical-nav">
+        <ul>
+          <li><a href="#section1" class="active"><span class="label">Home</span></a></li>
+          <li><a href="#section2"><span class="label">About</span></a></li>
+          <li><a href="#section3"><span class="label">Portfolio</span></a></li>
+          <li><a href="#section4"><span class="label">Contact</span></a></li>
+        </ul>
+    </nav> 
+    <nav class="flex" id="nav">    <!-- regular nav up top -->
          <input type="checkbox" id="menu">
          <label for="menu">Menu</label>
         <ul class="menu">
-            <li>
-                <a href="#0">
-                  
-
-                     
+            <li> <!-- icons? -->
                   <i class="fa-solid fa-person"></i>
                   <i class="fa-solid fa-universal-access"></i>
                   <i class="fa-regular fa-address-card"></i>                        
-                  <i class="fa-regular fa-comment-dots"></i> <span>About Me</span>
-                
-                </a>
+                  <i class="fa-regular fa-comment-dots"></i> 
+                  <a href="" class="btn">ABOUT</a>
             </li>
+
             <li>
-                <a href="#0">
-                  
                   <i class="fas fa-tasks" aria-hidden="true"></i>
-                  <i class="fa-solid fa-briefcase"></i> <span>Projects</span>
-                </a>
+                  <i class="fa-solid fa-briefcase"></i> 
+                  <a href="" class="btn">PROJECTS</a>
             </li>
+
+
             <li>
                 <a href="#0">
                   
@@ -66,14 +75,25 @@
                   <i class="fa-regular fa-paper-plane"></i><span>Contact</span>
                 </a>
             </li>
+
+            <li class="flex">
+                <input type="checkbox" id="themebtn" />
+                <label class="pulse" for="themebtn">LIGHT</label>
+            </li>
+           
+            <li class="flex">
+                    <input type="checkbox" id="langbtn" />
+                    <label class="pulse"  for="langbtn">ESP</label>   
+            </li> 
         </ul>
     </nav>
 
-    <header class="hidden" >  
+    <header class="" >  
           <h1 style=" font-family: GameOfSquids;" > DONNER DEV  </h1>
         <div class="subtitle-display">
+            
             <div class="subtitle-text"></div>
-          </div>
+        </div>
     
         <!-- Space for some sort of portfolio arts canvas or 3d render of some sorts
          kinda show off area -->
@@ -89,9 +109,11 @@
 
 
        <section class="projectsection flex"> <!-- has to be big -->
-            <h1>Projects</h1>
+
+
+            <h1>PROEJCTS</h1>
             
-            <article class="wide-container project " >
+            <article class=" " >
                 <div class="glows"> </div>
 
                 <h2>C'est La Brie - Ecommerce web</h2>  
@@ -123,19 +145,78 @@
             </div>
             
 
-            <!-- Other projects -->
-            <div class="card-container flex ">
+            <!--=============== OTHER PROJECTS SECTION =================-->
+            <div class="card-container">
 
 
 
 
-                                                        <!-- BYTEBOUTIQUE -->
-                <article class="project"> 
+                                                                             <!-- BYTEBOUTIQUE -->
+                <article class="card">       <!--  a class card -->
+
+                    <div class="glows"> </div>
+                    <h3> ByteBoutique  E-Commerce        </h3>
+                            <img src="project-img1.png" alt="project-img1">
+                        <p>
+                        Text de
+                        scriptions
+
+                        </p>
+                     <div class="date">6 Oct 2017</div>
+
+
+                    <div class="badge">    <!-- tool badge -->
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <span>TOOLS :   </span>
+                        <div class="tags">
+                            <div class="tag">HTML</div>
+                                <div class="tag">CSS</div>
+                                    <div class="tag">HTML</div>
+                        </div>
+                    </div> 
+
+                </article>
+
+
+
+                <article class="card">               <!-- DOMUS -->
+
+                      <div class="glows"> </div>
+                    <h3> ByteBoutique  E-Commerce</h3>
+                    <img src="project-img1.png" alt="project-img1">
+
+                        <p>
+
+                        Text de
+                        scriptions
+
+                        </p>
+                    
+                     <div class="date">6 Oct 2017</div>
+
+
+                    <span class="badge">    <!-- tool badge -->
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <span>TOOLS : </span>
+                        <div class="tags">
+
+                            <div class="tag">HTML</div>
+                            <div class="tag">CSS</div>
+                            <div class="tag">HTML</div>
+                        </div>
+                    </span> 
+
+                </article>
+
+
+
+                
+                <article class="card ">           <!-- CATERPILLAR or maybe the weather api -->
                     <div class="glows"> </div>
 
-                    <h6> ByteBoutique  E-Commerce        </h6>
+                    <h3> ByteBoutique  E-Commerce        </h3>
 
-                    <img src="project-img1.png" alt="project-img1">
+                    <img src="project-img3.png" alt="project-img3">
 
                     <p>
 
@@ -144,59 +225,20 @@
 
                     </p>
                     
-                    <span class="badge">    <!-- tool badge -->
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <span>TOOLS : </span>
-                    </span>
+                     <div class="date">6 Oct 2017</div>
 
-
-                </article>
-
-
-
-                <article class="">               <!-- DOMUS -->
-                    <div class="glows"> </div>
-
-                    <h6 > DOMUS Inmobiliaria    </h6>
-
-                    <img src="project-img1.png" alt="project-img1">
-
-                    <p >
-
-                        Text descriptions
-
-                    </p>
-
-                        
 
                     <span class="badge">    <!-- tool badge -->
                         <i class="fa-solid fa-screwdriver-wrench"></i>
                         <span>TOOLS : </span>
-                    </span>
+                        <div class="tags">
 
-                </article>
+                            <div class="tag">HTML</div>
+                            <div class="tag">CSS</div>
+                            <div class="tag">HTML</div>
+                        </div>
+                    </span> 
 
-
-
-                
-                <article class="project">           <!-- CATERPILLAR or maybe the weather api -->
-                    <div class="glows">
-          
-                    </div>
-
-
-                    <h6 > CATERPILLAR     </h6>
-
-                    <img src="project-img1.png" alt="project-img1">
-
-                    <p>
-                        Text descriptions
-                    </p>
-
-                    <span class="badge">    <!-- tool badge -->
-                        <i class="fa-solid fa-screwdriver-wrench fa-bounce" style="color: #B197FC;">tools used in project</i>
-                        <span>TOOLS : </span>
-                    </span>
 
                 </article>
 

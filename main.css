@@ -32,24 +32,25 @@ html{
     /* VARIABLES AND COLORS PALLETES */
 
 /* Color for developing. NOT FINAL */
---debug: #3d2b16; 
+--dessbug: #553ea8;
 
 
-
+--color: #763ebe;
+--transition-time: 0.5s;
 /* MUYY VEREMOS. VEREMOS. PALETA PROVISORIA PIOLA, RESEARCH UR GREENS  */
     --dark-space: #0f0f1a;
-    --dark-white: #e2ebff;
+    --dark-white: /* #e2ebff; */ #d3d0c9;
 
 
-    --dark-green: #04250d;
-    --dark-neon: #abf862  ; /* glow and neon effects mostly. i still want this to be sober. */
-    --dark-accent: #9b52b1; /* somewhere between pink and magenta should be fine */
+    --dark-green: #204622;
+    --dark-neon: #6ed865  ; /* glow and neon effects mostly. i still want this to be sober. */
+    --dark-accent: #714ef0; 
 
     
-    --lite-space:   #cfdac6  ;
+    --lite-space:   #d3d0c9;
     --lite-green:#42644a; ;
-    --lite-shadow: #171f24;
-    --lite-accent: #d452d8;  /* irdk about this one REALLY TRY THEM ALL BEFORE */
+    --lite-shadow: #0f0f1a;
+    --lite-accent: #b480f0;  /* irdk about this one REALLY TRY THEM ALL BEFORE */
 
 
 
@@ -63,10 +64,10 @@ html{
     --gradient: conic-gradient(
     from 180deg at 50% 70%,
     hsla(0, 0%, 98%, 1) 0deg,
-    #eec32d 72.0000010728836deg,
-    #ec4b4b 144.0000021457672deg,
-    #709ab9 216.00000858306885deg,
-    #4dffbf 288.0000042915344deg,
+    #7352b1 72.0000010728836deg,
+    #aaf8a7 144.0000021457672deg,
+    #5a87e7 216.00000858306885deg,
+    #d672a4 288.0000042915344deg,
     hsla(0, 0%, 98%, 1) 1turn
     );
 
@@ -83,7 +84,7 @@ body {
      background-color: var(--dark-space);
      color: var(--dark-white);
      width:100%; overflow-x: hidden;
-     border:1px solid #29d44e ;
+    /*  border:1px solid #29d44e ; */
      margin: auto;
      /* background pattern? */
      cursor:crosshair;
@@ -124,19 +125,18 @@ box-shadow: 0px 10px 35px 0px #305c168e;
     we're apparently going for glossy glass blur effect
 */
 
-#cursorglow{  /* canvas element */
-  z-index: 5555;
-  
 
+#cursorglow{  /* canvas element */
+  z-index: 10;
      border-radius: 50%;
     top:0; left:0;
     position: absolute;
-    /* DELAY GLOW FOLLOW */
-    animation: glowing  /* !??? What is this? where does it lead? */
+
 }
 
 .circle {
-    --circle-size: 40vh;
+    --circle-size: 1rem;
+    
     position: fixed;
     height: var(--circle-size);
     width: var(--circle-size);
@@ -148,6 +148,67 @@ box-shadow: 0px 10px 35px 0px #305c168e;
   }
   
 
+/* ============AUX BAR ================== */
+
+
+#aux input[type=checkbox]{ 
+  height: 0; width: 0;  /* so you never click the checkbox directly but rather the label */
+  visibility:hidden;
+}
+
+#aux input[type=checkbox]:checked + label:after{
+    transform: scale(5); /* are u the growing circling thing that toggles? */
+}
+
+
+#aux label { 
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+
+
+  color: #000;
+  font-size: 2rem; letter-spacing: 0.09rem;
+  padding: 1rem;   cursor: pointer;
+  border-radius: 0.4rem;
+  border: 0.3rem solid #000;
+  background: #ffffffc5;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 3px 0 0 #000;
+
+  transition: transform 0.2s ease;
+}
+
+
+
+#aux label::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: scale(0);
+  transition: transform 0.2s ease;
+  mix-blend-mode: difference;
+  background: radial-gradient(circle at center, #fff 24%, #000 25%, #000 100%);
+}
+
+
+
+
+
+#aux label:active {
+  top: 0px;
+  box-shadow: none;
+}
+
+
+
+
 
 
 
@@ -157,20 +218,42 @@ box-shadow: 0px 10px 35px 0px #305c168e;
 
 
 .altnav{
-  margin:2rem;
+  margin:2rem;  width:fit-content; height: fit-content; 
   position: absolute; top: 0;
-  border: 2px solid white;  
-  border-radius: 30px;
+
   background: rgba(0, 0, 0, 0.555);
   color: var(--dark-white);
   display: flex; justify-content: center; align-items: center;
   flex-direction: column ; flex-basis: 1;
-
+ 
+  top:0; left:0; 
+  border: 2px solid rgba(86, 89, 255, 0.486);
+  margin:1rem; width:fit-content;
 
 
 }
 
 
+.btn {
+  color: #fff;
+  cursor: pointer;
+  font-size:2em; font-weight: 400; padding:0.1em 0.5em;
+  position: relative; text-decoration: none; text-transform: uppercase;
+  width: 100%; 
+
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(202, 241, 186, 0.699); outline-offset: 1px;
+  transition: all 1150ms cubic-bezier(0.19, 1, 0.22, 1);
+} 
+
+.btn:hover {
+  border: 1px solid ;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(73, 163, 61, 0);
+  outline-offset: 15px;
+}
 
 
 
@@ -304,12 +387,12 @@ nav input:checked ~ .menu li a span {
 
   /* HEADER */
 header{
-    margin-top: 5rem; 
-    height: 80vh;
+    margin-top: 30vh; 
+    height: 60vh; padding: 0rem 10vw;
     display:flex; 
-    justify-content: center; 
-    flex-flow: column wrap;
-     border: 3px solid rgba(0, 0, 0, 0.452); 
+    justify-content: center; align-items: flex-start;
+    flex-direction: column;
+     border: 3px solid rgba(248, 248, 248, 0.315); 
    
     gap:1rem;
 
@@ -318,7 +401,7 @@ header{
 
 header h1{ 
     font-family: SquareGame;
-    display:block; font-size: 20vw; 
+     font-size: 15vw; 
     color: var(--dark-neon);
     text-shadow: -1px 10px 1px var(--dark-green);
     transition: text-shadow 0.3ms ease-out, letter-spacing 0.8s ease;
@@ -359,71 +442,91 @@ header h1:hover{
 
 
 .subtitle-display{
-    color:#803ed1;
-    font-family: "LinearBeam", monospace;
-    font-weight: 200;
-    font-style: normal;
+    color:var(--dark-accent); 
 
-    font-size:3rem; letter-spacing: -1px; 
-    text-shadow: 0px 6px 2px rgb(5, 5, 5), -2px 2px 0px rgb(52, 255, 89);
-    padding: 0px 40px;
+    font-size:3rem; letter-spacing: 2px; 
+    text-shadow: 0px 6px 2px rgb(5, 5, 5), -2px 2px 0px rgb(109, 207, 63);
+    padding: 0.3rem 2rem; 
     background-color: #151516; 
     box-shadow: 5px 5px 1px 3px #000000;
     width:fit-content;
 
-} 
+}
+
+.subtitle-text{
+  opacity:0.8; padding-left: 2rem;
+    font-family: "BlueScreen", monospace;
+}
+.subtitle-text{
+  content:" >> "
+
+}
 
 
+/* hover effect for divs.  blur out the edges maybe */
 
+.pulse:hover,
+.pulse:focus {
+  -webkit-animation: pulse 1s;
+          animation: pulse 1s;
+  box-shadow: 0 0 0 1em transparent;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--dark-accent);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--dark-accent);
+  }
+}
 
 /*===================== MAIN SCREEN ================================*/
 
 section{
   margin:10%;
 }
-
 main{
-/*   margin:5%;
-  padding: 5%; */
   background:none;
- width: 100%; height: 100%;/* 
-  border: 1px solid rgba(255, 166, 0, 0.541); */
 }
 
 h1{
-  font-family: BlueScreen;
-  font-size: 7vw; 
-  color: var(--dark-neon);
-  text-shadow: -1px 10px 10px var(--dark-green);
-  transition: text-shadow 0.6ms ease-out, letter-spacing 0.5s ease;
-  animation: glow 7s ease infinite alternate;
-
-
-  letter-spacing: .10ch;
 
 }
 
 
 
-/* PROJECT SECTION */
+/* ======================PROJECT SECTION========================================= */
 
 
 
 
 .projectsection{ 
-  border: 1px solid rgba(43, 255, 0, 0.459); padding: 4rem 0rem ;
-  border-radius:30px; 
-  box-shadow: inset 0px 100px 50px 0px #08070e; /* just for depth idk */
+  border: 1px solid rgba(68, 0, 255, 0.459); padding:10vh 10vw;
+  margin: auto; 
+   background: #00000057; border:1px solid white;
+   width:90vw;
+
 }
 
-section h1{
-  margin-bottom:3rem; letter-spacing: -0.05ch; 
+section h1{ 
+  font-family: LinearBeam;  font-size:7em; 
+  letter-spacing: 0.1ch; color:#41fd509c;
+  background: #0000007c; box-shadow: 0px 20px 70px 20px black;
+  padding: 0em 2em; align-self: center; margin-bottom:1.5em;
+  text-shadow: -10px 10px 0px black;
+  animation: glow 6s ease-in infinite alternate;
 } 
 
-.wide-container{
-      padding: 0rem 0rem; margin: 0;
-      width:100%; height:400px;
 
+.wide-container{
+      padding: 3em; margin: 10px;
+      width:100%; min-height:400px;
+      background: #00000057; 
+     
 }
 .splitscreen{
  /*  https://codepen.io/tutsplus/pen/bWKMoK  */
@@ -432,29 +535,7 @@ section h1{
 
 
 
-
-.card-container{
-  padding: 20px;   gap: 30px;
-
-
-  --spread: 60;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: var(--direction);
-  gap: calc(var(--gap) * 1px);
-  margin: 0 auto;
-  justify-content: center;
-  place-items: center;
-  position: relative;
-  padding: 2rem;
-  touch-action: none;
-
-
-}
-
-
-
-article{   /* each card */
+.card-container article{   /* each card */
 
   display: flex; justify-content: center;  
   align-items: flex-start;
@@ -476,10 +557,6 @@ article{   /* each card */
 
 }
 
-article:is(:hover, :focus-visible) {
-  z-index: 4;
-}
-
 
 .glows {
   pointer-events: none; position: absolute;
@@ -488,17 +565,17 @@ article:is(:hover, :focus-visible) {
 }
 
 .glows::after,
-.glows::before {    /* guess this is the main thing */
+.glows::before { 
   --alpha: 0;
-  content: "";
-  background: var(--gradient);
+  content: "";/* 
+  background: var(--gradient); */
   background-attachment: fixed;
   position: absolute;
   inset: -5px;
   border: 10px solid transparent;
   border-radius: var(--border-radius);
   mask: linear-gradient(#0000, #0000),
-    conic-gradient( /* omg CONIC gradient?!??! */
+    conic-gradient(
       from calc((var(--start) - (var(--spread) * 0.5)) * 1deg),
       #000 0deg,
       #fff,
@@ -514,96 +591,108 @@ article:is(:hover, :focus-visible) {
 
 
 
-article::before {
-  position: absolute;
-  inset: 0;
-  border: var(--border-width) solid transparent;
-  content: "";
-  border-radius: var(--border-radius);
-  pointer-events: none;
-  background: var(--border);
-  background-attachment: fixed;
-  border-radius: var(--border-radius);
-  mask: linear-gradient(#0000, #0000),
-    conic-gradient(
-      from
-        calc(
-          ((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 1.5)) *
-            1deg
-        ),
-      hsl(0 0% 100% / 0.15) 0deg,
-      white,
-      hsl(0 0% 100% / 0.15) calc(var(--spread) * 2.5deg)
-    );
-  mask-clip: padding-box, border-box;
-  mask-composite: intersect;
-  opacity: var(--active);
-  transition: opacity 1s;
+
+
+
+.card-container {
+  display: grid;   width: max-content;
+  justify-content: center; align-items: center;
+  grid-template-columns: 1fr 1fr 1fr; grid-gap: 4rem;
+  padding: 4rem; 
+  margin: 0 auto;/*  border: 2px solid blue;  */
+
 }
 
-article::after {
-  --bg-size: 100%;
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  background: var(--gradient);
-  background-attachment: fixed;
-  border-radius: var(--border-radius);
-  opacity: var(--active, 0);
-  transition: opacity 1s;
-  --alpha: 0;
-  inset: 0;
-  border: var(--border-width) solid transparent;
-  mask: linear-gradient(#0000, #0000),
-    conic-gradient(
-      from
-        calc(
-          ((var(--start) + (var(--spread) * 0.25)) - (var(--spread) * 0.5)) *
-            1deg
-        ),
-      #0000 0deg,
-      #fff,
-      #0000 calc(var(--spread) * 0.5deg)
-    );
-  filter: brightness(1.5);
-  mask-clip: padding-box, border-box;
-  mask-composite: intersect;
+.card {
+  background:#1a1919; height: 20em; width: 15em;
+  font-size: 1.5em;
+  color: var(--dark-white); border-radius: 25px;
+  padding: 30px;
+  display: flex;    align-items: flex-start;
+
+  box-shadow: 0 -2em 5em -1em black;
+  transition: all, var(--transition-time);
+
+  text-decoration: none;
 }
+
+.card:hover {
+  transform:scale(1.1); 
+
+  border:1px solid #2e2c85;
+  transition: all 0.3s ease;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.7em; font-weight:400;
+}
+
+.card p {
+  font-size: 0.7em; font-weight:200;
+  margin-top: 0.5em;
+}
+
+
+
 
 .badge {
-  border: 2px solid var(--border);
-  align-self: start;
-  border-radius: 100px;
-  padding: 0.5rem 0.7rem;
-  font-size: 0.675rem;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  font-weight: 50;
+  position:absolute; bottom:0;  left:50%; 
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(49, 50, 112, 0.664); border-radius: 5px;
+  padding: 0.3em 1em; gap: 5px;
+  font-size: 0.6em;  font-weight: 600;
+  display: flex; align-items: center; 
+  
+  width:max-content;
+  transition: all 0.1s ease-out;
+ 
+}
+.badge:hover  {
+  border: 1px solid rgba(65, 66, 143, 0.822);
+   padding: .5em 1.5em;  gap: 10px;
+  color:#dedef7; font-size: 0.8em;
+
+  transition: all 0.6s ease-in-out;
+}
+.badge .tags {
+  display: flex; padding:0;
 }
 
-a {
-  color: var(--color);
-  text-decoration: none;
-  opacity: 0.5;
-  display: inline-block;
-  align-self: start;
-  transition: opacity 0.2s;
+.badge .tags .tag {
+  font-size: 0.9em;
+  background: rgba(33, 35, 124, 0.5); 
+  border-radius: 0.2rem;padding: 0.1em 0.9em;
+  margin-left: 0.5em;
+  transition: all var(--transition-time);
+}
+.badge .tags .tag:hover {
+  background: rgba(66, 51, 199, 0.685);
+  font-size: 1em;
+  transition: all var(--transition-time);
+}
+.badge i{
+  padding:0; margin:0; font-size: 1em; color:#adaed6;
 }
 
-a:is(:hover, :focus-visible) {
-  opacity: 1;
-}
-
-article h6 {
-  margin: 0;
-  padding: 1rem 0;
-  font-weight: 100;
-  font-size: 1.5rem;
+.card .date {
+  position: absolute; top: 0; right: 0;
+  font-size: 0.7em;
+  padding: 1em;  line-height: 1em;opacity: .7;
 }
 
 
-
+/* MEDIA QUERIES */
+@media screen and (max-width: 1285px) {
+  .card-container {  grid-template-columns: 1fr 1fr;   }
+}
+@media screen and (max-width: 900px) {
+  .card-container {grid-template-columns: 1fr;  }
+}
+@media screen and (max-width: 500px) {
+  .card-container { padding: 4rem 2rem;  }
+  .card {    max-width: calc(100vw - 4rem);  }
+}
 
 
 
