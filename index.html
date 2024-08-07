@@ -3,333 +3,404 @@
 <head>
 <!-- 
     The default theme as of this version is DARK
-     [Will be changed to adapt to system preference and manual selection]
-     
+     [Will be changed to adapt to system preference and manual selection
 -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DONNER DEV - Portfolio </title>
+    <!-- favicon: -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="src/fonts/fonts.css">
     <script src="https://kit.fontawesome.com/b18770bfe9.js" crossorigin="anonymous"></script>
     <script defer src="app.js"></script>
     <script defer src="typing.js"></script>
-    
-
+    <script defer src="scrollnav.js"></script>
 </head>
 
 
-
-
-<body class="depth  ">
+<body class="bg_texture">
     <canvas id="cursorglow" class="circle" >
-    </canvas> <!-- do you work here? where you are now? -->
-<!-- check why cursor limits to upper area -->
-
-
-<!-- AUX ELEMENT -->
-
-
- <!-- Im desperately asking for help with this fucking shit ass nav -->
-        <!-- maybe have it be on the side center and when it opens it opens a menu that covers the whole right side ofth e page -->
-
-    <div class="altnav">
-        <!-- this is the vertical dots thingy for desktop minimalist navigation-->
-       
-    </div>
-
-
-    <nav class="cd-vertical-nav">
+    </canvas> <!-- finish at a later date -->
+    <nav class="flex" >  
         <ul>
-          <li><a href="#section1" class="active"><span class="label">Home</span></a></li>
-          <li><a href="#section2"><span class="label">About</span></a></li>
-          <li><a href="#section3"><span class="label">Portfolio</span></a></li>
-          <li><a href="#section4"><span class="label">Contact</span></a></li>
-        </ul>
-    </nav> 
-    <nav class="flex" id="nav">    <!-- regular nav up top -->
-         <input type="checkbox" id="menu">
-         <label for="menu">Menu</label>
-        <ul class="menu">
-            <li> <!-- icons? -->
-                  <i class="fa-solid fa-person"></i>
-                  <i class="fa-solid fa-universal-access"></i>
-                  <i class="fa-regular fa-address-card"></i>                        
-                  <i class="fa-regular fa-comment-dots"></i> 
-                  <a href="" class="btn">ABOUT</a>
-            </li>
-
             <li>
-                  <i class="fas fa-tasks" aria-hidden="true"></i>
-                  <i class="fa-solid fa-briefcase"></i> 
-                  <a href="" class="btn">PROJECTS</a>
-            </li>
+                <a href="#home" class="">
+                    <!-- <i class="fa-solid fa-house"></i>  -->
+                    <div>
+                       
+                        <svg class="icon" width="50px" height="50px" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="iconpath"  d="M10.5 14.9387H13.5C13.78 14.9387 14 15.1587 14 15.4387V20.4387C14 20.7187 13.78 20.9387 13.5 20.9387H10.5C10.22 20.9387 10 20.7187 10 20.4387V15.4387C10 15.1587 10.22 14.9387 10.5 14.9387Z" stroke="#eFeFdF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path class="iconpath" d="M8 20.9387H6C5.72 20.9387 5.5 20.7187 5.5 20.4387V10.9387H2.5L11.7 4.15875C11.88 4.02875 12.12 4.02875 12.29 4.15875L21.5 10.9387H18.5V20.4387C18.5 20.7187 18.27 20.9387 18 20.9387H16" stroke="#dFdFdF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <span class="label">HOME</span>
+                   
+                </a>
+            </li> 
 
 
             <li>
-                <a href="#0">
-                  
-                  <i class="fas fa-envelope-open-text" aria-hidden="true"></i>
-                  <i class="fa-regular fa-paper-plane"></i><span>Contact</span>
+                <a href="#about"> 
+                    <div >
+                        <svg class="icon" width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path class="iconpath" d="M8 13H16M8 13V18C8 19.8856 8 20.8284 8.58579 21.4142C9.17157 22 10.1144 22 12 22C13.8856 22 14.8284 22 15.4142 21.4142C16 20.8284 16 19.8856 16 18V13M8 13C5.2421 12.3871 3.06717 10.2687 2.38197 7.52787L2 6M16 13C17.7107 13 19.1506 14.2804 19.3505 15.9795L20 21.5" stroke="#1C274C" stroke-width="1" stroke-linecap="round"/>
+                            <circle class="iconpath" cx="12" cy="6" r="4" stroke="#dFdFdF" stroke-width="1"/>
+                            </svg>
+                    </div>
+                    <span class="label">ABOUT</span>    
                 </a>
             </li>
 
-            <li class="flex">
-                <input type="checkbox" id="themebtn" />
-                <label class="pulse" for="themebtn">LIGHT</label>
+
+            <li>
+            <a href="#projects">
+                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg class="icon"  width="50px" height="50px" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="iconpath" d="M20.98 7.77C21.27 7.77 21.5 8.01 21.5 8.31V18.53C21.5 18.83 21.27 19.07 20.98 19.07H3.02C2.73 19.07 2.5 18.83 2.5 18.53V8.31C2.5 8.01 2.73 7.77 3.02 7.77H20.98Z" stroke="#0F0F0F" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class="iconpath" d="M9 7.77V6.42999C9 6.15999 9.22 5.92999 9.5 5.92999H14.5C14.78 5.92999 15 6.14999 15 6.42999V7.77" stroke="#0F0F0F" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class="iconpath" d="M19.5 11.37H13.5V13.27C13.5 13.57 13.25 13.82 12.95 13.82H11.05C10.75 13.82 10.5 13.57 10.5 13.27V11.37H4.5" stroke="#0F0F0F" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+            <span class="label">PROJECTS</span>
+            </a>
             </li>
-           
-            <li class="flex">
+
+            <li>
+            <a href="#contact">
+                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg class="icon" width="50px" height="50px" viewBox="-0.5 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path class="iconpath"  d="M21.5 6.5L14.38 12.46H14.37L12.32 14.18C12.13 14.33 11.86 14.33 11.68 14.18L2.5 6.5H21.5Z" stroke="#0F0F0F" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class="iconpath"  d="M21.4999 18.5L15.9399 13.76" stroke="#0F0F0F" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class="iconpath"  d="M8.07 13.75L2.5 18.5" stroke="#0F0F0F" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class="iconpath"  d="M21.5 8.5V18.5H2.5V8.5" stroke="#0F0F0F" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                <span class="label">CONTACT</span>
+            </a>
+            </li>
+
+<!-- 
+Icons needed:
+Home
+About
+Portfolio
+Contact
+Up, Down, Download
+Light, Language            
+
+-->
+            
+
+
+            <li class="flex" id="aux">
+                <div class="flex">
+                    <i class="fa-regular fa-lightbulb"></i>
+                    
+                    <input type="checkbox" id="themebtn" />
+                    <label class="pulse" for="themebtn">LIGHT</label>
+                </div>
+               
+                <div class="flex">
+                    <i class="fa-solid fa-globe"></i>
                     <input type="checkbox" id="langbtn" />
                     <label class="pulse"  for="langbtn">ESP</label>   
-            </li> 
+                </div> 
+            </li>
         </ul>
-    </nav>
+    </nav> 
 
-    <header class="" >  
-          <h1 style=" font-family: GameOfSquids;" > DONNER DEV  </h1>
-        <div class="subtitle-display">
-            
-            <div class="subtitle-text"></div>
-        </div>
+<!--   /*AzoftSans, 
+  TripleDot, Tarrget, TarrgetItalic, Terminal, HomeVideo, HomeVideoBold,
+  FivoSans, Spaceport, Cyberphonic, BlueScreen, BatmanOutline, Elianto,
+  */ -->
+    <main class="" >
+
+        <header class=" flex" id="home">  
+            <div class="fries">
+                <h1>DONNER DEV</h1>
+                <div class="subtitle-display">
+                    <div class="subtitle-text"></div>
+                </div>
+            </div>  
     
-        <!-- Space for some sort of portfolio arts canvas or 3d render of some sorts
-         kinda show off area -->
-         <!-- https://codepen.io/hugo/pen/poyqwe something like this? -->
-    </header>
-    
-
-
-    <main class="">
-
-
-<!-- PROJECTS SECTION -->
-
-
-       <section class="projectsection flex"> <!-- has to be big -->
-
-
-            <h1>PROEJCTS</h1>
+            <div class="burger"> 
+                <h3>I craft beautiful and user-friendly experiences for the web.</h3>
             
-            <article class=" " >
-                <div class="glows"> </div>
-
-                <h2>C'est La Brie - Ecommerce web</h2>  
-                    <!-- main showcase of CLB -->
-                    <img src="project-img1.png" alt="project-img1">
-                    <p>
-                        Text descriptions
-                    </p>
-            </article>
-            
-            <div class="wide-container splitscreen" >  
-                <!-- https://codepen.io/tutsplus/pen/bWKMoK -->
-                 <!-- Proof of progress:
-                  2021/2024  CLB CASE STUDY
-                   -->
-                 <!-- for comparing clb old and new design -->
-                  <p>
-                    C'est La Brie is my passion project. 
-                    I started developing and designing this brand for a course a couple of years ago, and i brought to myself the challenge of COMPLETELY redesigning it 
-                    making use of the tools and experience i acquired through the years.
-                    From Figma wireframing to Final Production, 
-                    this artisanal cheese e-commerce platform was carefully designed around user experience and best practices in mind, always prioritizing branding and of course user experience.
-                    
-                   (!) This project also allowed me the opportunity to expand my skills to backend, 
-                   effectively teaching myself how to design and handle a business database with the clients, products and sales statistics.
-                   You can browse the fine dairy products and add them to your cart.
-                   Managing a project of this scale by my own taught me a lot of management and problem-solving skills, so even if ardous, it armed me with plenty of experience on all things web.
+                <p>
+                    I'm a passionate and results-oriented front-end developer with a knack for turning complex ideas into clean, intuitive interfaces. I rely on my knowledge in UI/UX design practices and system engineering formation to create engaging and impactful experiences for users.
                 </p>
+    
+                <h3><a href="#contact">Let's build something remarkable together. </a></h3>
             </div>
-            
+            <!-- Space for some sort of portfolio arts canvas or 3d render of some sorts
+             kinda show off area -->
+             <!-- https://codepen.io/hugo/pen/poyqwe something like this? -->
+        
+             <a href="#about" class="btn btn-circle">
+                <i class="fa fa-angle-double-down"></i>
+              </a>
+        </header>
 
-            <!--=============== OTHER PROJECTS SECTION =================-->
-            <div class="card-container">
+<!--============ ABOUT SECTION ============ -->
+<!-- FIX OBJECT PLACEMENTS. maybe grid implementation ?  -->
 
-
-
-
-                                                                             <!-- BYTEBOUTIQUE -->
-                <article class="card">       <!--  a class card -->
-
-                    <div class="glows"> </div>
-                    <h3> ByteBoutique  E-Commerce        </h3>
-                            <img src="project-img1.png" alt="project-img1">
-                        <p>
-                        Text de
-                        scriptions
-
-                        </p>
-                     <div class="date">6 Oct 2017</div>
-
-
-                    <div class="badge">    <!-- tool badge -->
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <span>TOOLS :   </span>
-                        <div class="tags">
-                            <div class="tag">HTML</div>
-                                <div class="tag">CSS</div>
-                                    <div class="tag">HTML</div>
-                        </div>
-                    </div> 
-
-                </article>
-
-
-
-                <article class="card">               <!-- DOMUS -->
-
-                      <div class="glows"> </div>
-                    <h3> ByteBoutique  E-Commerce</h3>
-                    <img src="project-img1.png" alt="project-img1">
-
-                        <p>
-
-                        Text de
-                        scriptions
-
-                        </p>
-                    
-                     <div class="date">6 Oct 2017</div>
-
-
-                    <span class="badge">    <!-- tool badge -->
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <span>TOOLS : </span>
-                        <div class="tags">
-
-                            <div class="tag">HTML</div>
-                            <div class="tag">CSS</div>
-                            <div class="tag">HTML</div>
-                        </div>
-                    </span> 
-
-                </article>
-
-
-
-                
-                <article class="card ">           <!-- CATERPILLAR or maybe the weather api -->
-                    <div class="glows"> </div>
-
-                    <h3> ByteBoutique  E-Commerce        </h3>
-
-                    <img src="project-img3.png" alt="project-img3">
-
-                    <p>
-
-                        Text de
-                        scriptions
-
-                    </p>
-                    
-                     <div class="date">6 Oct 2017</div>
-
-
-                    <span class="badge">    <!-- tool badge -->
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <span>TOOLS : </span>
-                        <div class="tags">
-
-                            <div class="tag">HTML</div>
-                            <div class="tag">CSS</div>
-                            <div class="tag">HTML</div>
-                        </div>
-                    </span> 
-
-
-                </article>
-
-
-
-                
-            </div>
-
-
-        </section>
-
-<!-- I trust that i will come back to this once i finish what i need to finish. -->
- <!-- before and after of the clb redesign -->
-  <!-- "I grabbed these and redesigned them for small businesses" -->
-   <!-- also add sprinkle to it maybe!? -->
-
-            
-
-
-       
-      
-          
-       <section class="glass aboutsection flex"> <!-- chathpt text. REVISE. -->
+       <section id="about" class=" "> 
         <h1>About Me</h1>
-            <p>
-                Ever since I was a kid, I loved the internet. I enjoyed browsing websites and exploring their functionalities. 
-                Through the years, I studied and developed a deep understanding of how they work and what makes them successful. 
-                I'm passionate about user design and pushing the boundaries of what's possible on the web.
-
-My name is Isabel Leonor Donner. A college student major in System Engineering specializing in web design and development. 
-My journey is enriched with a range of experiences, 
-including leading impactful projects during my time at [Your College/University]. 
-These projects involved [mention specific skills or technologies], 
-showcasing my ability to create user-centric solutions.
-
-In addition to my formal education, 
-I am continually exploring new ideas for projects that aim to enhance user experiences and solve real-world problems. I believe that thoughtful design can profoundly benefit people by [mention how your projects would benefit users].
-
-I am eager to apply my skills and creativity to contribute to innovative projects in [Your Profession or Field], leveraging my expertise in [mention relevant skills or technologies].
-
-Explore my portfolio to see examples of my work and projects!
- <!-- Projects or Contact button CTA ? -->
+        <div class="content">
+            <div  class="aboutleft flex">
+                <img  width="300px" src="src/about.jpg" id="selfpic" alt="about-section-img">
+                <a href="assets/cv.pdf" class="flex" download="CV_DonnerDEV" id="cv">
+                    <svg class="icon" width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      
+                        <path class="iconpath" d="M5 12V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V12" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class="iconpath" d="M12 3L12 15M12 15L16 11M12 15L8 11" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Download CV</span>
+                </a>
+            </div>
+            <div class="aboutright flex"> 
+                <ul class="flex">
+                    <li> Hello World! I'm Isabel Donner, a Front-End Web Developer based out of Argentina. 
+                        I love combining the worlds of logic and creativity to make eye-catching, accessible, and user-friendly websites and applications.
+                    </li>
+                    <li> 
+                        <div>
+                            Senior Student in System Engineering, Majoring as System Analyst in <a class="sliding-middle-out" href="https://www.frre.utn.edu.ar/"> UTN - FRRe </a>. I graduated from<a class="sliding-middle-out" href="https://buenosaires.gob.ar/educacion/codo-codo-40"> CODO a CODO </a> 2021 and began my path as a web developer, aided by all the knowledge i acquired through my career as a System Engineer.
+                        
+                        </div>
+                        <img  style="border-radius: 50%;"  src="src/utn.jpg" id="utnimg" alt="utn" width="100" height="100">
+                    </li>
+                   <!--  <li>
+                        []> Although I'm quite familiar with frameworks, my websites are primarily hand-coded using **HTML5, CSS3, & JavaScript**, arming myself with only the necessary libraries and resources for my (#)projects. With a strong emphasis on "Progressive Enhancement", I look for creative ways to push the boundaries of website front-end code without compromising on accessibility and performance.
+    
+                    </li> -->
+                    <li>  When not working or experimenting with code, I like to participate in local community events, write poetry and make art of all kinds. 
+                    </li>
+                </ul>
+    
+                <h2>Explore my <a class="sliding-middle-out" href="#projects">Portfolio</a> to see some examples of my work !</h2>
             
 
-            </p>
+            </div>
+
+
+        </div>
+            
        </section>
 
 
+<!--============ PROJECTS SECTION ============ -->
+
+
+       <section id="projects" class="flex">
+            <h1>PROJECTS</h1>
+
+            <div class="content">
+                
+
+                <div id="clb">
+
+
+                    <h2>C'est La Brie - Ecommerce Web</h2>  
+                    <div class="date"> 2024</div>
+                    <!-- main showcase of CLB -->
+                    <img src="project-clb.png" alt="project-img1">
+                    <p>
+                        This ecommerce platform / Brand design for the premium cheesery C'est La Brie is a reimagined version of an earlier iteration of the brand. It’s a showcase of my ability to transform a concept into a fully functional online store. From the brand's visual identity to the checkout process, I handled every aspect of the website. It’s not just about making something look good; it's about creating a seamless shopping experience that’s both visually appealing and easy to navigate.
+                    </p>
+            
+            
+
+                </div>
+
+                   
+        
+
+        <!--=============== OTHER PROJECTS  =================-->
+            <div class="card-container">
+                                                                         <!-- BYTEBOUTIQUE -->
+                <article class="card">       
+
+                <div class="glows"> </div>
+                <h3> ByteBoutique  E-Commerce        </h3>
+                        <img src="project-byt.png" alt="project-img1">
+                    <p>
+                        Led the development of this ecommerce platform built with TypeScript, Next.js, and Payload CMS. This project challenged me to independently manage all stages of development, from project conception to deployment. Overcoming technical challenges fostered resilience and problem-solving skills, resulting in a robust and scalable ecommerce solution.
+                    </p>
+                 <div class="date"> November - 2023</div>
+
+
+                <div class="badge">    <!-- tool badge -->
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <span>TOOLS :   </span>
+                    <div class="tags">
+                        <div class="tag">TypeScript</div>
+                            <div class="tag">NEXT.js</div>
+                                <div class="tag">PAYLOAD</div>
+                    </div>
+                </div> 
+
+                </article>
 
 
 
-        <section class="contact">
-            <h1>Contact Me!</h1>
-            <p>There shall be a form here soon if my daddy gets enough work done</p>
+                <article class="card">            
+
+                  <div class="glows"> </div>
+                <h3> Caterpillar</h3>
+                <img src="project-caterpillar.png" alt="project-img1">
+
+                    <p>Tribute game to the classic Snake game, with bugs! Pun intended.              </p>
+                    
+                 <div class="date">2023</div>
+
+
+                <span class="badge">    <!-- tool badge -->
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <span>TOOLS : </span>
+                    <div class="tags">
+
+                        <div class="tag">HTML</div>
+                        <div class="tag">CSS</div>
+                        <div class="tag">JS</div>
+                    </div>
+                </span> 
+
+                </article>
+
+
+
+            
+                <article class="card ">    
+                    <div class="glows"> </div>
+                    <h3> DOMUS Real State UI/UX Case Study </h3>
+                        <img src="project-domus.png" alt="project-img3">
+                        <p>
+                    In this collaborative project, I worked alongside a team of UI designers to develop the web layout for DOMUS, a real estate company. We adhered to industry best practices, including user research and testing, to create an intuitive and visually appealing user interface. This experience solidified my understanding of responsive design, cross-browser compatibility, and effective teamwork.
+
+
+                        </p>
+                        <div class="date">2022</div>
+                        
+                        <span class="badge">    <!-- tool badge -->
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <span>TOOLS : </span>
+                        <div class="tags">
+                        <div class="tag">HTML</div>
+                            <div class="tag">CSS</div>
+                                <div class="tag">JAVA</div>
+                                    <div class="tag">SPRING Boot</div>
+                                        <div class="tag">Figma</div>
+                        </div>
+                    </span> 
+
+                </article>
+
+ 
+                
+
+
+                
+            </div>
+
+
+        </section>
 
 
 
 
+
+<!--============ CONTACT SECTION ============= -->
+
+
+        <section  id="contact" class="" >
+            <h1>Contact Me</h1>
+
+
+
+            <div class="content">
+
+                <div class="contactinfo">
+
+                    <h2>For further details or to discuss your project's specific needs, feel free to contact me at </h2>
+                    <fieldset>
+                        <li><i class="fa-brands fa-whatsapp"></i> +54-3794664133</li>
+                        <li><i class="fa-regular fa-envelope-open"></i>Email me at:  leonor.donner@gmail.com</li>
+                    
+                    </fieldset>
+                    <legend>Follow me on social media(ugh)</legend>
+
+                    
+                    <fieldset>
+                        <a href="https://github.com/donner-dev"><i class="fa-brands fa-github"></i>Github</a>
+                        <a href="https://www.linkedin.com/in/donnerdev/"><i class="fa-brands fa-linkedin-in"></i>LinkedIn</a>
+                        <a href="https://codepen.io/Emerilda"><i class="fa-brands fa-codepen"></i>Codepen</a>
+
+                    </fieldset>
+                    <p>Thank you for your time!</p> 
+                    <svg class="icon" width="70" height="70" viewBox="0 0 24 24">
+                        <path class="iconpath" stroke="blue" d="M21,9H15V22H13V16H11V22H9V9H3V7H21M12,2A2,2 0 0,1 14,4A2,2 0 0,1 12,6C10.89,6 10,5.1 10,4C10,2.89 10.89,2 12,2Z" />
+                      </svg>
+                </div>
+
+                
+                <!--         FORM       -->
+                <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                            <h4>Leave me a message:</h4>
+                        <!-- Replace with your Access Key -->
+                                                    <input type="hidden" name="access_key" value="0e0bdd82-aaef-430a-9922-50601d6b3cad">
+                    
+
+                            <input  required type="text"  class="inputstyle"  name="name"  id="name" placeholder="Your name here" />   
+
+                            <input class="inputstyle" type="email"  name="email"  id="email" placeholder="Your email" required />
+                            
+                            <input class="inputstyle" type="tel"  name="phone"  id="phone" placeholder="Telephone N+">
+                            
+                            <textarea class="inputstyle" name="message" id="msg"  rows="8"  placeholder="Leave a message!">
+                            </textarea>
+
+
+                                                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                            
+                            <div class="flex" style="flex-flow: column nowrap;width:100%; background:none; justify-content: center; padding:10px 15px;">
+                                <div class="required-msg">REQUIRED FIELDS</div>
+                     
+                                <button type="submit">Submit</button>
+
+                            </div>
+                           
+                </form>
+
+
+
+           
+           
+            </div>
 
 
 
         </section>
 
+
         
+       
+
         <footer>
-                 <p>Made with love and discipline by me @ 2024   <i class="fa-solid fa-hand-peace"></i> <!-- do i get a peronista bonus -->
-                </p>
-        
-        
-        
-        
-        
-        
+            <a class="top btn btn-circle" href="#home">
+                <i class="fa fa-angle-double-up"> </i>
+                <label>Back to Top</label>
+            </a>
+            <p>
+                Built with love and discipline  @ 2024   <i class="fa-solid fa-hand-peace"></i> <!-- do i get a peronista bonus -->
+            </p>
+  
         </footer>
-
-
-
-
-
-
+       
     </main>
 
-        <!-- scripts -->
-         <script>
-                window.addEventListener('mousemove', (e) => {
-                mouse.x = e.x;
-                mouse.y = e.y;
-                });
-         </script>
-
-    
-   
 </body>
 </html>
