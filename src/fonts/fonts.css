@@ -1,98 +1,259 @@
 @font-face {
-    font-family: GameOfSquids;
-    src: url('GameOfSquids.woff2') format('woff2'),
-        url('GameOfSquids.woff') format('woff'),
-        url('GameOfSquids.ttf') format('truetype');
+    font-family: 'AzoftSans';
+    src: url('AzoftSans.woff2') format('woff2'),
+        url('AzoftSans.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family:BatmanOutline;
+    font-family: 'AzoftSans';
+    src: url('AzoftSans.woff2') format('woff2'),
+        url('AzoftSans.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BatmanOutline';
     src: url('BatmanForeverOutline.woff2') format('woff2'),
-        url('BatmanForeverOutline.woff') format('woff'),
-        url('BatmanForeverOutline.ttf') format('truetype');
+        url('BatmanForeverOutline.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family:Batman;
-    src: url('BatmanForeverAlternate.woff2') format('woff2'),
-        url('BatmanForeverAlternate.woff') format('woff'),
-        url('BatmanForeverAlternate.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family:Hungaria;
-    src: url('Hungaria-Regular.woff2') format('woff2'),
-        url('Hungaria-Regular.woff') format('woff'),
-        url('Hungaria-Regular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family:Origin;
-    src: url('OriginTechDemoRegular.woff2') format('woff2'),
-        url('OriginTechDemoRegular.woff') format('woff'),
-        url('OriginTechDemoRegular.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family:Hungaria;
-    src: url('Hungaria-Italic.woff2') format('woff2'),
-        url('Hungaria-Italic.woff') format('woff'),
-        url('Hungaria-Italic.ttf') format('truetype');
+    font-family: 'AzoftSans';
+    src: url('AzoftSans-Italic.woff2') format('woff2'),
+        url('AzoftSans-Italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family:SquareGame;
-    src: url('SquareGame-Regular.woff2') format('woff2'),
-        url('SquareGame-Regular.woff') format('woff'),
-        url('SquareGame-Regular.ttf') format('truetype');
+    font-family: 'AzoftSans';
+    src: url('AzoftSans-Italic.woff2') format('woff2'),
+        url('AzoftSans-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Batman';
+    src: url('BatmanForeverAlternate.woff2') format('woff2'),
+        url('BatmanForeverAlternate.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: BlueScreen;
+    font-family: 'Batman';
+    src: url('BatmanForeverAlternate.woff2') format('woff2'),
+        url('BatmanForeverAlternate.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Elianto';
+    src: url('Elianto-Regular.woff2') format('woff2'),
+        url('Elianto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BlueScreen';
     src: url('BlueScreenPersonalUse-Regular.woff2') format('woff2'),
-        url('BlueScreenPersonalUse-Regular.woff') format('woff'),
-        url('BlueScreenPersonalUse-Regular.ttf') format('truetype');
+        url('BlueScreenPersonalUse-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: Origin;
-    src: url('OriginTechDemoRegular_1.woff2') format('woff2'),
-        url('OriginTechDemoRegular_1.woff') format('woff'),
-        url('OriginTechDemoRegular_1.ttf') format('truetype');
+    font-family: 'Elianto';
+    src: url('Elianto-Regular.woff2') format('woff2'),
+        url('Elianto-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family:LinearBeam;
-    src: url('LinearBeam05.woff2') format('woff2'),
-        url('LinearBeam05.woff') format('woff'),
-        url('LinearBeam05.ttf') format('truetype');
+    font-family: 'BatmanOutline';
+    src: url('BatmanForeverOutline.woff2') format('woff2'),
+        url('BatmanForeverOutline.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BlueScreen';
+    src: url('BlueScreenPersonalUse-Regular.woff2') format('woff2'),
+        url('BlueScreenPersonalUse-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cyberphonic';
+    src: url('CyberphonicRegular.woff2') format('woff2'),
+        url('CyberphonicRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Cyberphonic';
+    src: url('CyberphonicRegular.woff2') format('woff2'),
+        url('CyberphonicRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FivoSans';
+    src: url('FivoSans-Oblique.woff2') format('woff2'),
+        url('FivoSans-Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FivoSans';
+    src: url('FivoSans-LightOblique.woff2') format('woff2'),
+        url('FivoSans-LightOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Spaceport';
+    src: url('Spaceport.woff2') format('woff2'),
+        url('Spaceport.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FivoSans';
+    src: url('FivoSans-Regular.woff2') format('woff2'),
+        url('FivoSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FivoSans';
+    src: url('FivoSans-Regular.woff2') format('woff2'),
+        url('FivoSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FivoSans';
+    src: url('FivoSans-LightOblique.woff2') format('woff2'),
+        url('FivoSans-LightOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FivoSans';
+    src: url('FivoSans-Light.woff2') format('woff2'),
+        url('FivoSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FivoSansMed';
+    src: url('FivoSans-Medium.woff2') format('woff2'),
+        url('FivoSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FivoSans';
+    src: url('FivoSans-Light.woff2') format('woff2'),
+        url('FivoSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TarrgetItalic';
+    src: url('TarrgetHalf-ToneItalic.woff2') format('woff2'),
+        url('TarrgetHalf-ToneItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TripleDot';
+    src: url('TripleDotDigital-7.woff2') format('woff2'),
+        url('TripleDotDigital-7.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Tarrget';
+    src: url('TarrgetHalf-Tone.woff2') format('woff2'),
+        url('TarrgetHalf-Tone.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Terminal';
+    src: url('Terminal.woff2') format('woff2'),
+        url('Terminal.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HomeVideo';
+    src: url('HomeVideo-Bold.woff2') format('woff2'),
+        url('HomeVideo-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HomeVideo';
+    src: url('HomeVideo-Regular.woff2') format('woff2'),
+        url('HomeVideo-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;

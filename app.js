@@ -12,7 +12,22 @@ if (theme){
 }
 
 
+const topButton = document.querySelector('.top');
 
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) { // Adjust the scroll position as needed
+    topButton.style.display = 'block';
+  } else {
+    topButton.style.display = 'none';
+  }
+});
+
+topButton.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
 
 
 
@@ -66,7 +81,7 @@ window.addEventListener('mousemove', (e) => {
 });
 
 // Smoothing factor for cursor movement speed (0 = smoother, 1 = instant)
-const speed = 0.17;
+const speed = 0.33;
 
 // Start animation
 const tick = () => {
@@ -154,18 +169,6 @@ window.addEventListener("DOMContentLoaded", function() {
 
 
 
-
-
-
-
-/* 
-toggles
-button onclick handle isactive background color change?
-                            - (later) WHAT THE FDCK DID I MEAN BY THIS
-*/
-
-/* LOAD CONTENT SECTION:  MAY CHANGE */
-
 function loadContent(section, isSubfolder = false){
     const baseUrl = "/"; 
 
@@ -175,9 +178,7 @@ function loadContent(section, isSubfolder = false){
         filePath = `${baseUrl}${section}/${section}.html`;
     } else {
         filePath = `${baseUrl}${section}.html`;
-    }
-
-   
+    }   
      // Fetch the content using fetch API
     fetch(filePath)
 
@@ -210,6 +211,39 @@ function loadContent(section, isSubfolder = false){
 
 
 /* other scripts? */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
