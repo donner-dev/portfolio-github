@@ -1,0 +1,15 @@
+
+{
+    "profile_h3":{
+        "rol": "header_donnerdev_burguer_h3",
+        "description:": "I craft beautiful and user-friendly experiences for the web."
+    },
+    "profile_p":{
+        "rol": "header_donnerdev_burguer_p",
+        "description:": "I'm a passionate and results-oriented front-end developer with a knack for turning complex ideas into clean, intuitive interfaces. I rely on my knowledge in UI/UX design practices and system engineering formation to create engaging and impactful experiences for users."
+    },
+    "profile_cta":{
+        "rol": "header_donnerdev_burguer_cta",
+        "description:": "Let's build something remarkable together. "
+    }
+}
