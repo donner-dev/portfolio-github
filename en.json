@@ -1,15 +1,64 @@
 
 {
-    "profile_h3":{
-        "rol": "header_donnerdev_burguer_h3",
-        "description:": "I craft beautiful and user-friendly experiences for the web."
+
+    "header":{
+        "header_h3":"I craft beautiful and user-friendly experiences for the web."
+        ,
+        "header_p": "I'm a passionate and results-oriented front-end developer with a knack for turning complex ideas into clean, intuitive interfaces. I rely on my knowledge in UI/UX design practices and system engineering formation to create engaging and impactful experiences for users."
+        ,
+        "header_cta": "Let's build something remarkable together. "
     },
-    "profile_p":{
-        "rol": "header_donnerdev_burguer_p",
-        "description:": "I'm a passionate and results-oriented front-end developer with a knack for turning complex ideas into clean, intuitive interfaces. I rely on my knowledge in UI/UX design practices and system engineering formation to create engaging and impactful experiences for users."
+
+    "nav":{
+        "nav_home":"Home",
+        "nav_about":"About",
+        "nav_projects":"Projects",
+        "nav_contact":"Contact"
     },
-    "profile_cta":{
-        "rol": "header_donnerdev_burguer_cta",
-        "description:": "Let's build something remarkable together. "
+
+
+    "about":{
+        "about_title":"About Me",
+        "about_download":"Download CV",
+        "about_li_1":"Hello World! I'm Isabel Donner, a Front-End Web Developer based out of Argentina. I love combining the worlds of logic and creativity to make eye-catching, accessible, and user-friendly websites and applications.",
+        "about_li_2":"Senior Student in System Engineering, Majoring as System Analyst in <a class=\"sliding-middle-out\" href=\"https://www.frre.utn.edu.ar/\"> UTN - FRRe <\/a>. I graduated from<a class=\"sliding-middle-out\" href=\"https://buenosaires.gob.ar/educacion/codo-codo-40\"> CODO a CODO <\/a> 2021 and began my path as a web developer, aided by all the knowledge i acquired through my career as a System Engineer.",
+        "about_li_3":" When not working or experimenting with code, I like to participate in local community events, write poetry and make art of all kinds. ",
+        "about_cta":"Explore my <a class=\"sliding-middle-out\" href=\"#projects\">Portfolio<\/a> to see some examples of my work !"
+
+    },
+
+
+
+    "projects":{
+            "p_title":"Projects",
+            "p_clb_desc": "This ecommerce platform and Brand design for the premium cheesery C'est La Brie is a reimagined version of an earlier iteration of the brand. It’s a showcase of my ability to transform a concept into a fully functional online store. From the brand's visual identity to the checkout process, I handled every aspect of the website. I believe it’s not just about making something look good; it's about creating a seamless shopping experience that’s both visually appealing and easy to navigate.",
+            "p_tools":"BUILT WITH : ",
+            "p_caterpillar_desc":"Tribute game to the classic Snake game with customizable settings on menu built entirely using plain Javascript and DOM manipulation . Only one bug.           ",
+            "p_domus_desc":"In this collaborative project, I worked alongside a team of UI designers to develop the web layout for DOMUS, a real estate company. We adhered to industry best practices, including user research and testing, to create an intuitive and visually appealing user interface. This experience solidified my understanding of responsive design, cross-browser compatibility, and effective teamwork."
+
+        },
+
+    
+    "contact":{
+        "contact_title":"Contact Me",
+        "contact_h4": "Leave me a message:",
+        "contact_info":"For further details or questions, feel free to contact me at ",
+        "contact_thank":"Thank you for your time!",
+
+        "form_name":"Full Name",
+        "form_email":"Email",
+        "form_phone":"Phone Number",
+        "form_message":"Message here", 
+        "form_send":"SEND",
+        "form_required":"Required"
+
+    },
+
+
+    "footer":{
+            "backtop":"Back to Top",
+            "footnote":" Built with love and discipline  @ 2024   <i class=\"fa-solid fa-hand-peace\"><\/i>" 
+          
     }
+
 }

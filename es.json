@@ -1,0 +1,67 @@
+
+{
+
+    "header":{
+        "header_h3":"Diseño experiencias hermosas y fáciles de usar para la web."
+        ,
+        "header_p": "Soy un desarrollador front-end apasionado con una vocación: convertir ideas complejas en interfaces limpias e intuitivas. Aprovecho mi conocimiento en prácticas de diseño UI/UX y formación en Ingeniería en Sistemas para crear experiencias atractivas e impactantes para los usuarios."
+        ,
+        "header_cta": "¡Construyamos algo extraordinario juntos!"
+    } ,
+
+    "nav":{
+        "nav_home":"Inicio",
+        "nav_about":"Sobre mi",
+        "nav_projects":"Proyectos",
+        "nav_contact":"Contacto"
+    },
+
+  
+
+    "about":{
+        "about_title":"Sobre Mí",
+        "about_download":"Descargar CV",
+        "about_li_1":"Hola Mundo! Soy Isabel Donner, un desarrollador Front-End de  Corrientes, Argentina. Amo poder combinar los mundos de la lógica y la creatividad para crear páginas web y aplicaciones que sean atrapantes, accesibles y fáciles de usar",
+        "about_li_2":"Soy un estudiante avanzado de la carrera de Ingenieria en Sistemas en <a class=\"sliding-middle-out\" href=\"https://www.frre.utn.edu.ar/\"> UTN - FRRe <\/a>. Me gradué en <a class=\"sliding-middle-out\" href=\"https://buenosaires.gob.ar/educacion/codo-codo-40\"> CODO a CODO <\/a> 2021 y empecé mi trayectoria como programador y diseñador web, apoyandome en el gran abanico de conocimientos y experiencia adquiridos en Ingenieria.",
+        "about_li_3":"Cuando no estoy trabajando en un proyecto o experimentando con código, disfruto de participar en eventos de la comunidad local, escribir poesía y crear arte en todas sus formas.",
+        "about_cta":"Explore mi <a class=\"sliding-middle-out\" href=\"#projects\">Portfolio<\/a> para ver muestras de mi trabajo."
+
+    },
+
+
+
+    "projects":{
+            "p_title":"Proyectos",
+            
+            "p_clb_desc": "En este proyecto consistió en transformar un concepto de marca en una tienda online completamente funcional y pensada en cada ínfimo aspecto. Reinventé el diseño de marca para C'est La Brie, empresa lider en productos lácteos artesanales.  
+            Me encargué de llevar a cabo cada aspecto del mismo, desde el diseño de logotipo e identidad visual hasta la implementacion de su plataforma e-commerce y la gestión de su base de datos.
+            Este proyecto me brindó muchisima experiencia no solo en todas las tecnologias si no tambien en la autogestión, disciplina y organizacion necesarias para un proyecto de gran escala como este."
+            ,
+            "p_tools":"HECHO CON : ",
+            "p_caterpillar_desc":"Juego tributo al clasico retro 'Snake' con ajustes personalizables en el menú  built entirely using plain Javascript and DOM manipulation . Only one bug.           ",
+            "p_domus_desc":"En este proyecto, colaboré con un equipo de diseñadores y analistas para diseñar y llevar a cabo el web layout de DOMUS, una empresa inmobiliaria. El trabajo incluyó un gestor interno administrativo para la empresa y una landing page para clientes. Esta experiencia solidificó mi conocimiento del diseño adaptativo y compatibilidad, así como afianzar mis habilidades de comunicación para trabajar en equipo. "
+        },
+
+    
+    "contact":{
+        "contact_title":"Contacto",
+        "contact_h4": "Deje un mensaje:",
+        "contact_info":"Para mayor información o consultas, no dude en ponerse en contacto conmigo:",
+        "contact_thank":"Gracias por su tiempo",
+
+        "form_name":"Nombre Completo",
+        "form_email":"Email",
+        "form_phone":"Número telefónico",
+        "form_message":"Mensaje", 
+        "form_send":"ENVIAR",
+        "form_required":"Requerido"
+    },
+
+
+    "footer":{
+            "backtop":"Inicio",
+            "footnote":" Diseñado con amor y perseverancia @ 2024   <i class=\"fa-solid fa-hand-peace\"><\/i>" 
+          
+    }
+
+}

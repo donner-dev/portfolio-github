@@ -203,45 +203,28 @@ a:hover .icon{
 /* ============AUX WRAPPER================== */
  
 #aux{
-  border: 1px solid white;
-  background-color: #0021471e;
-  width:100%;
- 
- padding:0.4em 1em;
+  background-color: #8bbcf336;
+  padding:0.5em;  gap:2rem;
  z-index:9;
  position:absolute; top:0; right:0px; 
-
  justify-content: center; align-items: center; flex-flow: row nowrap;
- 
- gap:1.5rem;
+
 }
 #aux > div{ 
-  display: flex; flex-flow: column nowrap; align-items: center;
-  width:fit-content; 
-  border-radius:10px;
-  border: 1px solid #fffd96;
-}
-
-#aux div i,li#aux div img{
- color: #ade8ff; 
- border: 1px solid var(--dark-cyan);
-  height:100%;
-}
-
-.auxlabel{  /* span actually */
-  font-size:0.8rem;
+  display: flex; flex-flow: row nowrap; align-items: center; gap:10px;
+  background-color: #000000c0;
+  border: 1px solid #b76aff;
+  padding:10px;
 
 }
-.auxinput{
-  color: #ade8ff; 
-  border: 1px solid var(--dark-cyan);
 
-}
+
+
 .flags{
-  width: 75px; display: flex;align-items: center;justify-content: space-between;
+  width: 95px; display: flex;align-items: center;justify-content: space-between;
 }
 .flags_item{
-width: 30px;
+width: 40px;
 }
 
 .flags_icon{
@@ -249,9 +232,26 @@ width: 30px;
   cursor: pointer;
 }
 
+/* inactive flag: opacity 0.5  active: 0.5*/
+
+.inactive{
+  opacity:0.5;
+}
+
+.active{
+  opacity:1;
+}
 
 
-
+#lightswitch {
+  justify-content: center;
+  
+}
+#lightswitch i{
+  font-size: 1.5em; 
+  color: #ade8ff; 
+  height:100%;
+}
 
 
 
