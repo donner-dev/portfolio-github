@@ -1,15 +1,10 @@
 /* DOM ELEMENTS */
-const themeBtn = document.getElementById('themeBtn');
+
 const body = document.body;
 /* NAV BTN */
 let nav = document.querySelector("#nav");
 let navbtn = document.querySelector(".nav-btn");
 
-/* apply cached theme on reload */
-const theme = localStorage.getItem('theme');
-if (theme){
-    body.classList.add(theme);
-}
 
 
 const topButton = document.querySelector('.top');
@@ -33,15 +28,45 @@ topButton.addEventListener('click', () => {
 
 
 
+
 /* =========== =    THEME TOGGLE HANDLER     =  ============== */
 
 
+const storedTheme = localStorage.getItem('theme');
+const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
+let theme;
+if (storedTheme){ /* check for saved theme in localStorage*/
+    theme = storedTheme;
+    console.log("Theme found in localStorage: ",theme);
+} else if (prefersDarkMode.matches) { /* check if user prefers dark */
+  console.log("User prefers dark mode");  theme = "dark";
+} else {
+  console.log("User prefers light mode");   theme = "light";
+}
 
-/* =========== =     MOUSE GLOW STUFF     =  ============== */
+document.body.setAttribute("data-theme", theme);   /* apply initial theme */
 
-document.addEventListener("onmouseover",(event)=>{
-  cursor.classList.add("glowing");
-});
+/*MANUAL LIGHT SWITCHER */
+const lightswitcher = document.getElementById('switcher');
+lightswitcher.checked = theme === "dark";
+
+lightswitcher.addEventListener("change", (ev) => {
+    const newTheme = ev.target.checked ? "dark" : "light";
+    document.body.setAttribute("data-theme", newTheme);
+    localStorage.setItem('theme', newTheme);
+
+    console.log(`Theme set to ${newTheme.toUpperCase()}`);
+});                                         
+
+
+
+
+
+
+
+/* =========== =     MOUSE STUFF     =  ============== */
+
+
 
         /* IDEA!! I could use these event listeners to:
         when a BOX is ACTIVE, fetch the coordinates of where the cursor is 
@@ -64,7 +89,7 @@ document.addEventListener("onmouseover",(event)=>{
 
 */
 
-console.clear();
+
 const circleElement = document.querySelector('.circle');
 
 // objects to track mouse position and custom cursor position
@@ -162,7 +187,6 @@ tick();
 
 window.addEventListener("DOMContentLoaded", function() {
   
-  navbtn.onclick = function(){displayNav()};
 
 
 }); 

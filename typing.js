@@ -63,15 +63,11 @@ class TextScramble {
       return this.chars[Math.floor(Math.random() * this.chars.length)];
     }}
   
-  
-  // ——————————————————————————————————————————————————
-  // Example
-  // ——————————————————————————————————————————————————
-  
+
   const phrases = [
-  'Creating wonderful things',
+  'Centering divs',
   'Software Design',
-  'UI/UX Designer',
+  'UX/UI Designer',
   'Front End Wizard',
   'Logic, Creativity and Magic',
   'Always Learning',
@@ -79,24 +75,28 @@ class TextScramble {
 ];
 
 const frases = [
-  'Creando cosas maravillosas',
+  'Centrando divs',
   'Diseño de Software',
-  'Diseñadora UI/UX',
-  'Hechicero del Front End',
-  'Logica, Creatividad y Magia!',
-  'Siempre aprendiendo',
+  'Diseñadora UX/UI',
+  'Maga del Front End',
+  'Logica, Creatividad y Magia',
+  'Aprendiendo siempre',
   'Cebando otro Mate'
 ];
 
-  
-  const el = document.querySelector('.subtitle-text');
+
+const lang = document.body.getAttribute('data-user-lang');
+let langtexts = (lang ==='es' ? frases : phrases);
+
+    const el = document.querySelector('.subtitle-text');
   const fx = new TextScramble(el);
 
   let counter = 0;
   const next = () => {
-    
-    fx.setText(phrases[counter]).then(() => {
-      setTimeout(next, 2000);
+    const lang = document.body.getAttribute('data-user-lang');
+    let langtexts = (lang ==='es' ? frases : phrases);
+    fx.setText(langtexts[counter]).then(() => {
+      setTimeout(next, 3000);
     });
     counter = (counter + 1) % phrases.length;
   };

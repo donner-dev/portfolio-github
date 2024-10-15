@@ -7,6 +7,11 @@
         "header_p": "I'm a passionate and results-oriented front-end developer with a knack for turning complex ideas into clean, intuitive interfaces. I rely on my knowledge in UI/UX design practices and system engineering formation to create engaging and impactful experiences for users."
         ,
         "header_cta": "Let's build something remarkable together. "
+        ,
+        "webdev":"Web Development",
+        "backend":"Backend Engineer",
+        "uxui":"UX/UI and System Designer",
+        "system":"System Engineer"
     },
 
     "nav":{

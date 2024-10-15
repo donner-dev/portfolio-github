@@ -7,6 +7,11 @@
         "header_p": "Soy un desarrollador front-end apasionado con una vocación: convertir ideas complejas en interfaces limpias e intuitivas. Aprovecho mi conocimiento en prácticas de diseño UI/UX y formación en Ingeniería en Sistemas para crear experiencias atractivas e impactantes para los usuarios."
         ,
         "header_cta": "¡Construyamos algo extraordinario juntos!"
+        ,
+        "webdev":"Web Development",
+        "backend":"Backend Engineer",
+        "uxui":"UX/UI and System Designer",
+        "system":"System Engineer"
     } ,
 
     "nav":{
@@ -32,13 +37,9 @@
 
     "projects":{
             "p_title":"Proyectos",
-            
-            "p_clb_desc": "En este proyecto consistió en transformar un concepto de marca en una tienda online completamente funcional y pensada en cada ínfimo aspecto. Reinventé el diseño de marca para C'est La Brie, empresa lider en productos lácteos artesanales.  
-            Me encargué de llevar a cabo cada aspecto del mismo, desde el diseño de logotipo e identidad visual hasta la implementacion de su plataforma e-commerce y la gestión de su base de datos.
-            Este proyecto me brindó muchisima experiencia no solo en todas las tecnologias si no tambien en la autogestión, disciplina y organizacion necesarias para un proyecto de gran escala como este."
-            ,
+            "p_clb_desc": "Este proyecto consistió en transformar un concepto de marca en una tienda online completamente funcional y pensada en cada ínfimo aspecto. Reinventé el diseño de marca para C'est La Brie, empresa lider en productos lácteos artesanales. Me encargué de llevar a cabo cada aspecto del mismo, desde el diseño de logotipo e identidad visual hasta la implementacion de su plataforma e-commerce y la gestión de su base de datos. Gracias a este proyecto me armé de muchisima experiencia no solo en todas las tecnologias si no tambien en la autogestión, disciplina y organizacion necesarias para un proyecto de gran escala como este.",
             "p_tools":"HECHO CON : ",
-            "p_caterpillar_desc":"Juego tributo al clasico retro 'Snake' con ajustes personalizables en el menú  built entirely using plain Javascript and DOM manipulation . Only one bug.           ",
+            "p_caterpillar_desc":"Juego tributo al clasico retro 'Snake' con ajustes personalizables en el menú construido completamente con manipulación del DOM y Javascript vanilla. Un sólo bug ;)         ",
             "p_domus_desc":"En este proyecto, colaboré con un equipo de diseñadores y analistas para diseñar y llevar a cabo el web layout de DOMUS, una empresa inmobiliaria. El trabajo incluyó un gestor interno administrativo para la empresa y una landing page para clientes. Esta experiencia solidificó mi conocimiento del diseño adaptativo y compatibilidad, así como afianzar mis habilidades de comunicación para trabajar en equipo. "
         },
 

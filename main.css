@@ -5,74 +5,114 @@
   inherits: true;
   initial-value: 0;
 }
+/* FONT FACES LIST: 
+AstronBoy, Aline, AstronBoyWonder, AstronBoyRg, Kernel, CyberCity 
+Blackpast, NeoWave,Neosans,  AROW, Delogy, Artypa, Azure, Dissolve
+Halfomania, Fireside, Kilby, SYSTEMIA,SYSTEMIA1, SYSTEMIA2, SPACERR, STARBLASTER
+Practice, PracticeMono, OUTERFRONTIER, OUTERFRONTIER1
+
+KernelBO, KernelBS, KernelH, KernelHS, KernelL, KernelLO KernelHO,
+KernelSBSC, KernelLSC, KernelRSC, KernelSBO, KernelR, KernelR0, KernelTO
+KernelTSC, KernelSB, KernelT
+
+
+*/
+
 
 html{
   scroll-behavior: smooth;
-    background-color: var(--dark-space);
-    font-family: 'FivoSans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
-    /*AzoftSans, 
-    TripleDot, Tarrget, TarrgetItalic, Terminal, HomeVideo, HomeVideoBold,
-    FivoSans, Spaceport, Cyberphonic, BlueScreen, BatmanOutline, Elianto,
-    */
+    font-family: KernelLO ,'FivoSans', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+    /* FONT FACES LIST: 
+PracticeMono  simple minimal, kinda cute tbh
+ Aline,  sometimes simple is best, doble NN thunder 
+CyberCity,   cyberpunk kinda title. very bold
+STARBLASTER, middle between cybercity and practicemono 
+SYSTEMIA, better if bold. legible AND cool
+
+subtitles: AROW, NeoWave, Azure ,AstronBoy, AstronBoyWonder, AstronBoyRg, Kilby,
+Halfomania
+screen: Dissolve,  SPACERR(USING),  Artypa,
+KernelBO, KernelBS, KernelH, KernelHS, KernelL, KernelLO KernelHO,
+KernelSBSC, KernelLSC, KernelRSC, KernelSBO, KernelR, KernelR0, KernelTO
+KernelTSC, KernelSB, KernelT
+*/
     font-size:16px;
     height:100%; width:100%;
     font-weight: 300;padding:0;
     text-align:left;
     
 }
-.bg_texture{
-    background-color: #09081d;
-background-image: url(./src/shley-tree-1.png);
-} 
+
 
 
 :root {
   box-sizing: border-box;
 
-/* VARIABLES AND COLORS PALLETES */
-/* CHANGE ACCORDING TO WHATS NECESSARY FOR DARK MODE */
---transition-time: 0.5s;
+/* VARIABLES AND COLORS PALLETES */  
 
---dark-space:  #0a0b14;                            /* #0f0f1a;  #282937; #171928;  */
---dark-white: #cdd2d4;        
---lite-space:   --dark-white;
---lite-shadow: var(--dark-space);                    /* #e2ebff; */ 
-
-
---dark-ink: rgb(0, 1, 51); 
---dark-cyan: #71d5e2;
---dark-green: #4AAA6E;         /*  #1f381e; */
---dark-purple:#5c68c7;
-
---lite-cyan:#71D1E4;
---lite-green:#60c77f;
---lite-purple: #7779d5;  
-
---dark-neon: #7d5bd8  ; /* glow and neon effects mostly. i still want this to be sober. */
---dark-accent: #50c545; 
+  --dark-space:  #0a0b14;                            /* #0f0f1a;  #282937; #171928;  */
+  --dark-white: #cdd2d4;   
+  --dark-cyan: #71d5e2;
+  --dark-green: #4AAA6E;         /*  #1f381e; */
+  --dark-purple:#5c68c7;
+  --lite-cyan:#71D1E4;
+  --lite-green:#60c77f;
+  --lite-purple: #7779d5; 
+  --dark-neon: #7d5bd8  ; 
+  --dark-accent: #50c545; 
+/* =============== */
 
 
-/* HOLA TE ESTOY CAMBIANDO */
+} /* ================================================================END OF ROOT */
 
 
-}
-/* end root */
 
 
 
 /*===================== CONTAINERS ================================*/
+
 body {
-    background-color: var(--dark-space);
-    color: var(--dark-white);
     width:100%; height:fit-content;
      overflow-y: scroll;
     scrollbar-width: none; 
     scroll-behavior: smooth;
     margin: auto;
       display: flex; justify-content: center; flex-flow: column nowrap;
+  /* this SHOULD be dynamic */
+      background-color: var(--bg-color);
+      color: var(--text-color);
   
 }
 
+/* Light theme colors */
+body[data-theme="light"] {
+  --lite-cyan:#71D1E4;
+  --lite-green:#60c77f;
+  --lite-purple: #7779d5; 
+  --bg-color: #7fc1ca; 
+  --text-color: var(--dark-space);   
+}
+
+/* Dark theme colors */
+body[data-theme="dark"] {   
+  --dark-cyan: #71d5e2;
+  --dark-green: #4AAA6E;         /*  #1f381e; */
+  --dark-purple:#5c68c7;
+  /* figure out if these ones are used: */
+  --dark-neon: #7d5bd8  ; 
+  --dark-accent: #50c545; 
+  --bg-color:var(--dark-space) ; 
+  --text-color: var(--dark-white);   
+}
+
+.bg_texture{
+  background-color: var(--bg-color);
+background-image: url(./src/cartographer.png);
+} 
+
+body[data-theme="light"].bg_texture{
+  background-color: var(--lite-cyan);
+}
 
 
 .flex{
@@ -92,7 +132,7 @@ body {
 }
 
 .circle {
-    --circle-size: 1em;
+    --circle-size: 3rem;
     position: fixed;
     height: var(--circle-size);
     width: var(--circle-size);
@@ -116,7 +156,6 @@ body {
 /* Done! :) */
 
 nav{z-index:2; 
-  color: var(--dark-white);
   position: fixed;top:0;
   transition: all 0.4s;
  height:100vh; 
@@ -128,7 +167,8 @@ nav::before{  /* background? */
   transform: translateX(-100%);
 }
 nav:hover::before{
-    background-color: #000000c9;   transform: translateX(0%);
+    background-color: var(--dark-space);   opacity: 0.5;
+    transform: translateX(0%);
   transition: all 0.5s ease-out;
 }
 nav ul{  z-index:3;
@@ -158,20 +198,31 @@ nav ul li a:hover{
   transition: all 1s ease-out;
 }
 nav li a .label{
-  /*AzoftSans, 
-  TripleDot, Tarrget, TarrgetItalic, Terminal, HomeVideo, HomeVideoBold,
-  FivoSans, Spaceport, Cyberphonic, BlueScreen, BatmanOutline, Elianto,
-  */ 
-  font-family:HomeVideo; letter-spacing: 0.25ch; 
-  font-size: 1em; 
-  transform: translateX(-100%) scale(0.1); opacity: 0; 
+    /* FONT FACES LIST: 
+PracticeMono  simple minimal, kinda cute tbh
+ Aline,  sometimes simple is best, doble NN thunder 
+CyberCity,   cyberpunk kinda title. very bold
+STARBLASTER, middle between cybercity and practicemono 
+SYSTEMIA, better if bold. legible AND cool
+
+subtitles: AROW, NeoWave, Azure ,AstronBoy, AstronBoyWonder, AstronBoyRg, Kilby,
+Halfomania
+screen: Dissolve,  SPACERR(USING),  Artypa,
+KernelBO, KernelBS, KernelH, KernelHS, KernelL, KernelLO KernelHO,
+KernelSBSC, KernelLSC, KernelRSC, KernelSBO, KernelR, KernelR0, KernelTO
+KernelTSC, KernelSB, KernelT
+*/
+font-family:Kilby; font-weight: 600;
+letter-spacing: 0.25ch; 
+  font-size: 0.8em; 
+  transform: translateX(-100%) ; opacity: 0; 
  transition: all 0.5s;
  position: relative;
- bottom:5px;
+ bottom:5px; padding:5px 0px; 
 }
 nav li a:hover .label{ 
-  transform:translateX(0%) scale(1); opacity: 1;
-  color: #96eaff;
+  transform:translateX(0%); opacity: 1;
+  color: #c6e8e9; text-shadow: 0px -3px 2px #37979b ;
   transition: all 0.7s;   
 
 }
@@ -203,55 +254,116 @@ a:hover .icon{
 /* ============AUX WRAPPER================== */
  
 #aux{
-  background-color: #8bbcf336;
-  padding:0.5em;  gap:2rem;
+width:100%;
+  padding:1em;  gap:1rem;
  z-index:9;
  position:absolute; top:0; right:0px; 
- justify-content: center; align-items: center; flex-flow: row nowrap;
+ justify-content: center; align-items: center; flex-flow: column nowrap;
 
 }
 #aux > div{ 
-  display: flex; flex-flow: row nowrap; align-items: center; gap:10px;
-  background-color: #000000c0;
-  border: 1px solid #b76aff;
-  padding:10px;
-
+  display: flex; align-items: center; 
+  justify-content: center; gap:10px;
+  width:3.5em;
+  
 }
 
 
-
-.flags{
-  width: 95px; display: flex;align-items: center;justify-content: space-between;
+#flags{
+  background-color: #00000049;
+  display: flex; flex-flow: column nowrap; gap:25px;
+  border: 2px solid var(--dark-space); 
+  border-radius: 60px; padding:10px;
+  
 }
 .flags_item{
-width: 40px;
+  width:2.3em; height:2.3em;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:3em;
+  border-radius: 50%;
+  cursor: pointer;
+  transition:all 0.2s ease;
 }
 
-.flags_icon{
-  display: block;
-  cursor: pointer;
+.flags_item:hover{
+  border:1px solid var(--dark-cyan); box-shadow: 0px 0px 5px 2px var(--lite-cyan);
+  transition:all 0.2s ease-in;
+}
+#flag_es{
+  background-image: url("./src/ar.svg");
+}
+#flag_en{
+  background-image: url("./src/gb.svg");
 }
 
 /* inactive flag: opacity 0.5  active: 0.5*/
-
 .inactive{
   opacity:0.5;
 }
-
 .active{
   opacity:1;
 }
 
+.themeswitcher{
+  justify-content: center ; align-items: center;
+  position:relative;
+}
 
-#lightswitch {
-  justify-content: center;
+/* roll */
+label {
+  position: relative;
+  display: block;text-indent: -9999px;
+  height: 2em; width: 4em;
   
+  background-color: transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: .5s ease background-color;
+  border: 2px solid var(--dark-space);
+
 }
-#lightswitch i{
-  font-size: 1.5em; 
-  color: #ade8ff; 
-  height:100%;
+/* checked roll */
+input#switcher:checked + label {
+  
+  border: 2px solid var(--dark-space);
+  background-color: var(--dark-cyan); opacity:0.8;
+  
+  transition: .5s ease background-color;
 }
+
+/* little ball */
+label::after {
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  background-color:var(--dark-cyan);
+  border: 2px solid var(--dark-space);
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  transition: .5s ease;
+}
+/* checked little ball */
+input#switcher:checked + label::after {
+  background-color: var(--dark-space);
+  border: 2px solid var(--dark-space);
+  left: calc(100% - 25px);
+}
+
+
+input#switcher {
+  position:absolute;
+  width: 0px;
+  height: 0px;
+  visibility: hidden;
+}
+
+
+
 
 
 
@@ -267,75 +379,95 @@ width: 40px;
 
 
 header{
-    height: 100vh; width:100%;  padding: 5vh 10vw;
+    height: 100vh; width:100%;  padding: 5%;
     display:flex;  flex-flow:column wrap; 
     justify-content: space-between; align-items: center;
 
-    grid-area: header;
-    background-color: #00000049; 
-    box-shadow: inset #000000 0px 0px 80px 50px,
+    grid-area: header; 
+    box-shadow: inset black 0px 0px 80px 50px,
     inset black 0px -40px 120px 0px;
 }
 
-header .fries{ width:100%;
-display: flex; flex-flow: column nowrap; 
-
+body[data-theme="light"] header{
+  box-shadow:inset rgb(15, 26, 26) 0px 0px 20px 0px, inset rgb(100, 151, 151) 0px 0px 280px 50px;
 }
 
-header .fries h1{ 
-  display: inline; line-height: 1; padding-left: 2rem;
-  font-family:  TarrgetItalic, sans-serif; 
-    letter-spacing:-.01ch;
-    font-size: clamp(4rem, 10vw + 1rem, 20rem);
-    color: #3dfdfde1;  
-    animation: glow 3s ease-in infinite alternate;
-    transition: all 0.4s ease-out;
+header .fries{ 
+display: flex; flex-flow: column nowrap; margin:0; padding:0;
+}
 
+/* FONT FACES LIST: 
+PracticeMono  simple minimal, kinda cute tbh
+ Aline,  sometimes simple is best, doble NN thunder 
+CyberCity,   cyberpunk kinda title. very bold
+STARBLASTER, middle between cybercity and practicemono 
+
+SYSTEMIA, better if bold. legible AND cool
+
+
+subtitles: AROW, NeoWave, Azure ,AstronBoy, AstronBoyWonder, AstronBoyRg, Kilby,
+Halfomania
+screen: Dissolve,  SPACERR,  Artypa,
+KernelBO, KernelBS, KernelH, KernelHS, KernelL, KernelLO KernelHO,
+KernelSBSC, KernelLSC, KernelRSC, KernelSBO, KernelR, KernelR0, KernelTO
+KernelTSC, KernelSB, KernelT
+*/
+
+header .fries h1{ 
+  font-family:PracticeMono, sans-serif; 
+  font-style: oblique;font-weight: 300;font-feature-settings: "ss01";
+  display: inline; padding:3rem; padding-bottom:1rem; user-select: none;
+    font-size: min(25vw, 10rem);letter-spacing:.01ch;
+    color: var(--dark-space);  
+    margin: 0 auto; text-align: center;
+    width: 70%;     line-height: 1; 
+    word-wrap: break-word;  overflow-wrap: break-word; 
+    animation: glow 5s ease-in-out infinite alternate;
+    transition: all 0.4s ease-out;
+}
+
+body[data-theme="light"] h1{
+  color: var(--dark-white);  
 }
 header .fries h1:hover{
   letter-spacing:.05ch;
-  transition:  all 0.9s ease-out;
-
+  transition:  all 1s ease-out;
 }
 
 @keyframes glow {
   from {
-    text-shadow: 0 0 25px #8d40d6e8, -8px 3px 0px #7f50ee;
+    text-shadow: 8px 0px 1px var(--dark-cyan), -5px 0px 0px var(--dark-green) ;
   }
   to {
-    text-shadow: 0 0 35px #4f78ff, 6px 3px 1px #4732ff;
+    text-shadow: -8px -5px 0px #5b45ad , 5px 0px 1px var(--dark-purple)  ;
   
   }
 }
-
+/* its not done but its better than it was. move on to something else for the LOVE OF GOD */
 .subtitle-display{
-  margin:5px;
-  position: relative; top:0%;
-  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0,0,0,1));
-  border-bottom: 1px solid aquamarine;
-  height: 5.5rem; line-height: 1.2;
-  font-family:TripleDot;
-  text-align: start; 
-  font-size: clamp(0.5rem, 1vh + 1rem, 10rem);
-  color:#66daa0; 
-  text-shadow:
-  3px 0px 5px rgba(50, 255, 43, 0.712),
-  1px 0px 3px rgba(172, 255, 47, 0.705),
-  0px 5px 15px rgba(4, 131, 0, 0.753);
-
+  position:absolute; z-index: -1;
+  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.308), rgba(0, 0, 0, 0.671));
+  border-radius: 50%; width:70vw; height:70vh; overflow-x: hidden;
+  border: 1px solid rgba(92, 223, 179, 0.534);
+ left: 50%;transform: translateX(-50%);
+ top: -55%; 
 }
 
 .subtitle-text{
-  width:100%;
-opacity:0.9;  padding: 2rem; 
-margin-bottom:5rem; user-select: none;
+  transform: translateY(-70%);
+ text-align: center; z-index: 3; opacity:1;  user-select: none;
+font-family:SPACERR; 
+letter-spacing: 0.3ch;  
+font-size: clamp(1rem, 3vh + 1rem, 10rem);
+color:#16df92; text-shadow: 1px 3px 1px rgb(21, 119, 86), 0px 0px 10px rgba(98, 231, 131, 0.658);
 }
 .subtitle-text::before{
-  content:"> "
+  content:"< " ;animation: blink 1s  infinite ;
 }
 .subtitle-text::after{
-  content:"_ ";
-  animation: blink 0.7s  infinite ;
+  content:"  > _ ";
+  font-size:smaller;
+  animation: blink 1s  infinite ;
 }
 @keyframes blink{
   0%{
@@ -347,49 +479,52 @@ margin-bottom:5rem; user-select: none;
 }
 
 
-header .burger{
- 
-  display: flex; flex-flow: column nowrap; justify-content: center;
-  padding:1em 3em;  background-color: #021c2941; gap:1rem;
-  font-size: clamp( 1rem, 1.1vh + 1rem, 5rem);
-  border:2px solid #38809c; 
-  box-shadow: inset  #1c47589d 0px 0px 40px 10px,
-  #22607941 0px 40px 70px 5px,
-  #0d4358 0px 5px 40px 0px
-  ;
+
+.concepts{
+  position:relative;
+   height:20vh; width: 50vw;
+  display: flex; flex-direction: column; 
+  justify-content: center; align-items: center;
+
+}
+.concepts > div{
+  position:absolute;
+  top:-20px;
+  font-size: 2.5em;font-family: Aline; 
+  text-shadow: #000 2px 2px 0px, #222222 -1px -1px 0px, #000 0px 5px 10px;
 }
 
-header .burger p{
-  color: #ddd;
+#webdev{
+  color:rgb(85, 63, 182);
+
+
 }
-
-
-header .burger h3:hover a{
-  color:white;
-  font-weight: bolder;
+#backend{
+  color:rgb(64, 170, 50);
+  transform: translate(-15%,60%);
 }
-header .burger h3:hover a{
-  color:white;
-  font-weight: bolder;
+#uxui{
+  color:rgb(157, 112, 230);
+  transform: translate(0%,125%);
+
+
 }
+#system{
+    color:rgb(39, 134, 197);
 
-/*AzoftSans, 
-  TripleDot, Tarrget, TarrgetItalic, Terminal, HomeVideo, HomeVideoBold,
-  FivoSans, Spaceport, Cyberphonic, BlueScreen, BatmanOutline, Elianto,
-  */
-
+    transform: translate(15%,180%);
+}
 
   /* Scroll down button */
   
 .btn {
-  color: #fff;
+  color: var(--text-color);
   cursor: pointer;
   font-size:2em; font-weight: 400; padding:0.1em 0.5em;
   position: relative; text-decoration: none; text-transform: uppercase;
   width: 100%; 
 
   border: 0 solid;
-  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
   outline: 1px solid;
   outline-color: rgba(162, 243, 232, 0.699); outline-offset: 1px;
   transition: all 1150ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -401,7 +536,7 @@ header .burger h3:hover a{
 }
   .btn-circle {
     margin:auto;
-    width: 70px; color: rgb(179, 255, 251);
+    width: 70px; color: var(--dark-cyan);
     height: 70px;
     border: 2px solid #fff;
     border-radius: 100%; display: flex;
@@ -409,8 +544,9 @@ header .burger h3:hover a{
   }
   
   .btn-circle:hover {
-    background: rgba(70, 194, 163, 0.288);
-    border: 1px solid #00b9a1; color:rgb(182, 253, 241);
+    background: rgba(62, 233, 190, 0.479);
+    border: 1px solid var(--text-color); color:var(--text-color);
+    box-shadow: #00000049 0px 10px 10px 1px;
     width: 80px; height: 80px;
     transition: all 0.3s ease-in;
   }
@@ -455,7 +591,6 @@ h3, h6{
 section{
 background-color: #0000008c;
   margin:0;
-  border:1px solid rgba(77, 188, 216, 0.733); 
  position: relative; display: grid;place-items: center;align-content:center;
   min-height:100vh;
 
@@ -465,17 +600,17 @@ background-color: #0000008c;
   rgba(6, 18, 41, 0.26) inset 0px -40px 160px 10px;
 }
 
-section h1{   z-index: 3;
+body[data-theme="light"] section{
+  background-color: #ffffff1a;
+  box-shadow: none;
+}
 
-  font-family: TarrgetItalic;  
- /*AzoftSans, 
-  TripleDot, Tarrget, TarrgetItalic, Terminal, HomeVideo, HomeVideoBold,
-  FivoSans, Spaceport, Cyberphonic, BlueScreen, BatmanOutline, Elianto,
-  */ 
+section h1{   z-index: 3;
+  font-family: CyberCity;  
   font-size:4.5em;  height:100%; line-height:1;
   writing-mode: vertical-rl; text-align: center; 
-  color:#c3dfff;
-  background: #00000070;
+  color:var(--text-color);
+  background: #0000008f;
   letter-spacing: 0.3ch;
   box-shadow: 0px 20px 70px 20px black,
   inset 0px 05px 10px 0px rgba(17, 17, 29, 0.486);
@@ -492,16 +627,18 @@ section h1{   z-index: 3;
   }
 }
 
+
 .content{
   width:min(1000px, 80vw);
-  position: relative;
-  text-align: center;
+  position: relative; text-align: center;
   background-color: #05060cd2;
-  border:3px double rgba(62, 157, 201, 0.644); border-radius: 15PX;
+  border:3px double rgba(62, 157, 201, 0.644); border-radius: 10px;
 }
-.content h2, .content h3{
-  animation: textColor 14s ease-out infinite;
+
+body[data-theme="light"] .content{
+  background-color: #b5d4d6d7;
 }
+
 .content:after {
   position: absolute;
   content: "";
@@ -553,11 +690,6 @@ section h1{   z-index: 3;
 
 
 
-
-
-
-
-
 #projects .content{
  width: max(75%, 600px);
 margin:90px;
@@ -567,9 +699,6 @@ margin:90px;
   text-align: start;
   min-height:25rem; display: flex; justify-content: space-around; gap:10px; flex-flow: column nowrap;
 }
-
-
-
 
 
 .card-container article{   /* each card */
@@ -696,58 +825,28 @@ margin:90px;
 /* ======================ABOUT SECTION========================================= */
 
 #about .content{
-padding: 5%; display: flex;
+  position: relative; 
+padding: 5%; display: flex; flex-flow: column wrap;
+
+justify-content: center; align-items: center;
 }
+
+
+
+
+body[data-theme="light"] #about {}
+
 
 #selfpic{
-  border: 1px solid rgb(141, 195, 211); 
-  border-left:10px double rgb(69, 188, 204);
-  display:flex; 
-  float: left; 
+  border: 3px double rgb(15, 104, 116);  z-index:3;
+  border-radius:50%;
 }
-.aboutleft{
-  flex-grow: 4; width:100%; gap:20px;
-  justify-content: start; align-items: center;
-}
-.aboutright{
-  flex-grow: 3;  gap:10px;
-  justify-content: start; align-items: center;
-}
-
-
-
-#about ul{
- text-align: start;
- padding-inline-start: 1ch;
-  
-}
-#about ul li{
-  display: flex; 
-  padding-inline-start: 1ch;
-  font-size: 1.2em;
-  padding:20px;
-}
-#utnimg{
-  margin: 5px 10px; width:100px; height:100px;
-}
-#about ul li::before {
-  content: '\1F782'; margin-right:10px; 
-  /* Styles for Indentation*/
-  color: #54cfff;  display: inline-block;
-  width: 1em; margin-left: -1em;
-}
-#about a{
-  font-weight:400;   color: #71d5e2; padding: 0px 5px;
-}
-
 #cv{
-  position: relative; 
-  padding:5px 20px; width:fit-content;
-  border:1px solid #54ffff93;
+ z-index:0;  padding:5rem; 
+  border:1px solid var(--dark-cyan); background-color: #000000cb;
   color:#d7ffffbb;
-  font-family: Spaceport; font-size: 1.2em;
-  background-image: linear-gradient(to bottom,#05193700, #061f441c, #0d96cc27, #0095c250);
- border-radius: 1px;
+  font-family: KernelBS; font-size: 1.2em; 
+  border-radius: 30px;
   transition: all 0.6s ease-in;
 }
 #cv:hover {
@@ -766,9 +865,32 @@ padding: 5%; display: flex;
   animation:none; position:absolute; bottom:15%;
 }
 #about h2 a{padding: 0px ;}
+#about ul{
+  text-align: start;
+  padding-inline-start: 1ch;
+   
+ }
+ #about ul li{
+   display: flex; 
+   padding-inline-start: 1ch;
+   font-size: 1.2em;
+   padding:20px;
+ }
+ #utnimg{
+   margin: 5px 10px; width:100px; height:100px;
+ }
+ #about ul li::before {
+   content: '\1F782'; margin-right:10px; 
+   /* Styles for Indentation*/
+   color: var(--dark-accent);  display: inline-block;
+   width: 1em; margin-left: -1em;
+ }
+ #about a{
+   font-weight:400;   color: #71d5e2; padding: 0px 5px;
+ }
+ 
 
-
-  .sliding-middle-out {
+/*   .sliding-middle-out {
     display: inline-block;
     position: relative;
   }
@@ -784,7 +906,7 @@ padding: 5%; display: flex;
   .sliding-middle-out:hover:after {
     width: 100%;
     background: #7de5ffee;
-  }
+  } */
 
 
 

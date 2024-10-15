@@ -9,58 +9,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DONNER DEV - Portfolio </title>
     <!-- favicon: -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="src/fonts/fonts.css">
     <script src="https://kit.fontawesome.com/b18770bfe9.js" crossorigin="anonymous"></script>
+    
+    <script>
+        // Set the language of the HTML document to match the browser's default language
+        document.documentElement.lang = navigator.language || navigator.userLanguage;
+    </script>
     <script defer src="app.js"></script>
     <script defer src="typing.js"></script>
     <script defer src="lang.js"></script>
     <script defer src="scrollnav.js"></script>
+    
 </head>
 
-
-<body class="bg_texture" data-user-lang="en">
+<body data-theme="light" class="bg_texture" data-user-lang="es">
     <canvas id="cursorglow" class="circle" >
     </canvas> <!-- finish at a later date -->
 
-    <div class="flex" id="aux">
-
-
-        <!-- LANG SWITCH -->
-
-        <div id="flags" class="flags">
-
-            <div class="flags_item" data-language="es">
-                <img src="./src/ar.svg" alt="ar_flag">
-           </div>
-
-
-            <div class="flags_item" data-language="en">
-                <img src="./src/gb.svg" alt="gb_flag"> 
-            </div>
-            
-        </div>
-
-
-
-
-            <!-- LIGHT SWITCH -->
-        <div id="lightswitch" class="flex">
-          
-            
-          <i class="fa-regular fa-lightbulb"></i>
-   
-        </div>
-
-    </div>
-
-
     <nav class="flex" >  
+        <div class="flex" id="aux">
+            <!-- LANG SWITCH -->
+    
+            <div id="flags" >
+                <div class="flags_item" id="flag_en" data-language="en"></div>  
+                <div class="flags_item" id="flag_es" data-language="es"></div>
+                   
+            </div>
+    
+                <!-- LIGHT SWITCH -->
+            <div class="themeswitcher">
+                <input type="checkbox" id="switcher">
+                <label for="switcher">Switch</label>
+            </div>
+    
+        </div>
         <ul>
             <li>
                 <a href="#home" class="" >
@@ -120,31 +109,23 @@
         </ul>
     </nav> 
 
-<!--   /*AzoftSans, 
-  TripleDot, Tarrget, TarrgetItalic, Terminal, HomeVideo, HomeVideoBold,
-  FivoSans, Spaceport, Cyberphonic, BlueScreen, BatmanOutline, Elianto,
-  */ -->
     <main class="" >
 
         <header class=" flex" id="home">  
-            <div class="fries">
+            
                 <!-- look up how to access these strings for translation -->
-                <div class="subtitle-display">
-                    <div class="subtitle-text"></div>
-                </div> 
+                <div class="subtitle-display"></div> 
+                <div class="subtitle-text"></div>
+            <div class="fries">
                 <h1>DONNER DEV</h1>
             </div>  
-    
-            <div class="burger"> 
-                <h3 data-section="header" data-value="header_h3">I craft beautiful and user-friendly experiences for the web.</h3>
-            
-                <p data-section="header" data-value="header_p">
-                    I'm a passionate and results-oriented front-end developer with a knack for turning complex ideas into clean, intuitive interfaces. I rely on my knowledge in UI/UX design practices and system engineering formation to create engaging and impactful experiences for users.
-                </p>
-    
-                <h3 ><a href="#contact" data-section="header" data-value="header_cta">Let's build something remarkable together. </a></h3>
+            <div class="concepts">
+                <div data-section="header" data-value="webdev" id="webdev"> Web Development</div>
+                <div data-section="header" data-value="backend" id="backend">Backend Engineer</div>
+                <div data-section="header" data-value="uxui" id="uxui">UX/UI and System Designer</div>
+                <div data-section="header" data-value="system" id="system">System Engineer</div>
             </div>
-
+            
         
              <a href="#about" class="btn btn-circle">
                 <i class="fa fa-angle-double-down"></i>
@@ -156,27 +137,43 @@
 
        <section id="about" class=""> 
  <!-- TO-BE-DEVELOPED-DESIGNED-AND-TRANSLATED-THUSLY -->
-        <!-- <div class="color-concepts">
-            <p>All the layers on my skill spectrum</p>
-            <div class="cyan">WEB DEV</div>
-            <div class="green">DATABASES</div>
-            <div class="purple">UI/UX DESIGN</div>
-            <div class="white">SYSTEM ENGINEERING</div>
-        </div> -->
+
+
         <h1>About Me</h1>
         <div class="content">
-            <div  class="aboutleft flex">
-                <img  width="300px" src="src/about.jpg" id="selfpic" alt="about-section-img">
-                <a href="assets/cv.pdf" class="flex" download="CV_DonnerDEV" id="cv">
-                    <svg class="icon" width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      
-                        <path class="iconpath" d="M5 12V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V12" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path class="iconpath" d="M12 3L12 15M12 15L16 11M12 15L8 11" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                    <span data-section="about" data-value="about_download">Download CV</span>
-                </a>
-            </div>
-            <div class="aboutright flex"> 
+            
+                
+                <div class="burger"> 
+                    <div class="cv-box">
+                        
+                        <img  width="300px" src="src/about.jpg" id="selfpic" alt="about-section-img">
+
+                        <a href="assets/cv.pdf" class="flex" download="CV_DonnerDEV" id="cv">
+                            <svg class="icon" width="40px" height="40px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              
+                                <path class="iconpath" d="M5 12V18C5 18.5523 5.44772 19 6 19H18C18.5523 19 19 18.5523 19 18V12" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path class="iconpath" d="M12 3L12 15M12 15L16 11M12 15L8 11" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <span data-section="about" data-value="about_download">Download CV</span>
+                        </a>
+                    </div>
+    
+                    
+
+                    <div>
+                        <h3 data-section="header" data-value="header_h3">I craft beautiful and user-friendly experiences for the web.</h3>
+                
+                        <p data-section="header" data-value="header_p">
+                            I'm a passionate and results-oriented front-end developer with a knack for turning complex ideas into clean, intuitive interfaces. I rely on my knowledge in UI/UX design practices and system engineering formation to create engaging and impactful experiences for users.
+                        </p>
+                    
+                        <h3 ><a href="#contact" data-section="header" data-value="header_cta">Let's build something remarkable together. </a></h3>
+                            
+                    </div>
+                
+                
+                </div>
+
                 <ul class="flex">
                     <li data-section="about" data-value="about_li_1"> Hello World! I'm Isabel Donner, a Front-End Web Developer based out of Argentina. 
                         I love combining the worlds of logic and creativity to make eye-catching, accessible, and user-friendly websites and applications.
@@ -196,9 +193,7 @@
                 </ul>
     
                 <h2 data-section="about" data-value="about_cta">Explore my <a class="sliding-middle-out" href="#projects">Portfolio</a> to see some examples of my work !</h2>
-            
-
-            </div>
+         
 
 
         </div>
@@ -213,11 +208,7 @@
             <h1 data-section="projects" data-value="p_title">PROJECTS</h1>
 
             <div class="content">
-                
-
                 <article class="card" id="clb">
-
-
                     <h2 data-section="projects" data-value="p_clb_title">C'est La Brie - Ecommerce Web</h2>  
                     <div class="date"> 2024</div>
                     <!-- main showcase of CLB -->
@@ -245,25 +236,6 @@
             <div class="card-container">
                                                                          <!-- BYTEBOUTIQUE -->
                 <article class="card">       
-
-
-                <h3> ByteBoutique  E-Commerce        </h3>
-                        <img src="project-byt.png" alt="project-img1">
-                    <p data-section="projects" data-value="">
-                        Led the development of this ecommerce platform built with TypeScript, Next.js, and Payload CMS. This project challenged me to independently manage all stages of development, from project conception to deployment. Overcoming technical challenges fostered resilience and problem-solving skills, resulting in a robust and scalable ecommerce solution.
-                    </p>
-                 <div class="date"> November - 2023</div>
-
-
-                <div class="badge">    <!-- tool badge -->
-                    <i class="fa-solid fa-screwdriver-wrench"></i>
-                    <span data-section="projects" data-value="p_tools">TOOLS :   </span>
-                    <div class="tags">
-                        <div class="tag">TypeScript</div>
-                            <div class="tag">NEXT.js</div>
-                                <div class="tag">PAYLOAD</div>
-                    </div>
-                </div> 
 
                 </article>
 
