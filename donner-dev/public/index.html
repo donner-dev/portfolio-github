@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Donner DEV</title>
+  </head>
+  <body>
+    <div id="root">   </div> <!--ROOT DIV. NO TOUCHIE. --> 
+
+        <!-- navbar component done -->
+
+
+      <main class="" >
+
+<!--============ PROJECTS SECTION ============ -->
+
+
+     <section id="projects" class="flex">
+          
+
+      </section>
+
+
+
+
+
+      <!--============ CONTACT SECTION ============= -->
+
+
+      <section  id="contact" class="" >
+            <h1 data-section="contact" data-value="contact_title">Contact Me</h1>
+          <div class="content">
+
+
+      
+              <!--         FORM       -->
+              <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                  <h4 data-section="contact"  data-value="contact_h4" >Leave me a message:</h4>
+                                          <input type="hidden" name="access_key" value="0e0bdd82-aaef-430a-9922-50601d6b3cad">
+                  <input data-section="contact" data-value="form_name"  required type="text"  class="inputstyle"  name="name"  id="name" placeholder="" /> <label for="name">Full Name</label>
+                  <input data-section="contact" data-value="form_email"  class="inputstyle" type="email"  name="email"  id="email" placeholder="" required /> <label for="email">Email</label>
+                  <input data-section="contact" data-value="form_phone"  class="inputstyle" type="tel"  name="phone"  id="phone" placeholder=""> <label for="name">Phone Number</label>
+                  <textarea data-section="contact" data-value="form_message"  class="inputstyle" name="message" id="msg"  rows="8"  placeholder=""><label for="message">Message here</label>
+                  </textarea>
+                  <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                  <input type="hidden" name="redirect" value="https://yourwebsite.com/thanks.html">   
+                  <div data-section="contact" data-value="form_required"  class="required-msg"></div> 
+                  <button data-section="contact" data-value="form_send" type="submit">SEND</button>
+                </form>
+
+      <div class="contactinfo">
+
+          <h2 data-section="contact" data-value="contact_info" style="color:rgb(88, 207, 152); user-select:none;">For further details or questions, feel free to contact me at </h2>
+          <div>
+              <li><i class="fa-brands fa-whatsapp"></i> +54-3794664133</li>
+              <li><i class="fa-regular fa-envelope-open"></i> leonor.donner@gmail.com</li>
+          
+          </div>
+
+          
+          <div class="socialicons">
+              <a href="https://github.com/donner-dev">
+                  <i class="socialicon fa-brands fa-github"></i>
+              </a>
+
+              <a href="https://www.linkedin.com/in/donnerdev/">
+                  <i class="socialicon fa-brands fa-linkedin-in"></i>
+              </a>
+
+              <a href="https://codepen.io/Emerilda">
+                  <i class="socialicon fa-brands fa-codepen"></i>
+              </a>
+          </div>
+          <p data-section="contact" data-value="contact_thank" style="user-select: none;">Thank you for your time!</p> 
+          </div>
+
+
+ 
+ 
+          </div>
+
+
+
+      </section>
+
+         
+     
+
+      <footer>
+          <a class="top btn btn-circle" href="#home">
+              <i class="fa fa-angle-double-up"> </i>
+              <label data-section="footer" data-value="backtop">Back to Top</label>
+          </a>
+          <p>
+              Built with love and discipline  @ 2024   <i class="fa-solid fa-hand-peace"></i> <!-- do i get a peronista bonus -->
+          </p>
+
+      </footer>
+     
+  </main>
+
+
+
+
+
+
+
+  
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
